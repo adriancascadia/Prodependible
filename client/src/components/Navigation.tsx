@@ -28,7 +28,7 @@ export default function Navigation() {
 
   return (
     <>
-      <nav className={`fixed top-12 left-0 right-0 z-40 transition-all duration-500 ${
+      <nav className={`transition-all duration-500 ${
         scrolled || !isHomePage
           ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-border" 
           : "bg-gradient-to-b from-black/60 to-transparent"
