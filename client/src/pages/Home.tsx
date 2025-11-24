@@ -94,7 +94,7 @@ export default function Home() {
       <PromoBanner />
       
       {/* Premium Navigation */}
-      <nav className={`fixed top-12 left-0 right-0 z-40 transition-all duration-500 ${
+      <nav className={`transition-all duration-500 ${
         scrolled 
           ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-border" 
           : "bg-gradient-to-b from-black/60 to-transparent"
@@ -233,7 +233,7 @@ export default function Home() {
       )}
 
       {/* Premium Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden py-24">
+      <section className="relative -top-40 left-0 right-0 -z-10  min-h-screen flex items-center justify-center overflow-hidden py-24">
         {/* Video Background */}
         <video
           autoPlay
