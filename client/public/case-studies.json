@@ -1,0 +1,86 @@
+[
+  {
+    "id": "deck-transformation-teaneck",
+    "slug": "deck-transformation-teaneck",
+    "title": "Complete Deck Transformation in Teaneck",
+    "category": "Deck Reconstruction",
+    "location": "Teaneck, NJ",
+    "duration": "2 weeks",
+    "budget": "$15,000 - $20,000",
+    "year": "2024",
+    "featured": true,
+    "challenge": "The homeowners had a 20-year-old deck that was showing severe signs of wear, with rotting boards, unstable railings, and faded stain. The structure was unsafe for their family gatherings and needed complete reconstruction.",
+    "solution": "We demolished the existing deck and rebuilt it from the ground up using premium pressure-treated lumber and composite decking materials. Added modern cable railings for unobstructed views, integrated LED lighting, and created a two-level design to maximize the sloped yard.",
+    "results": [
+      "Increased home value by approximately $25,000",
+      "Created 600 sq ft of safe, beautiful outdoor living space",
+      "Zero maintenance composite decking with 25-year warranty",
+      "Integrated lighting extends usability into evening hours"
+    ],
+    "testimonial": {
+      "text": "Sergey and his team transformed our dangerous old deck into a stunning outdoor oasis. The attention to detail and quality of work exceeded our expectations. We now host family barbecues every weekend!",
+      "author": "Robert H.",
+      "rating": 5
+    },
+    "images": {
+      "before": "/gallery/deck-reconstruction-before.jpg",
+      "after": "/gallery/deck-reconstruction-after.jpg"
+    }
+  },
+  {
+    "id": "basement-renovation-hackensack",
+    "slug": "basement-renovation-hackensack",
+    "title": "Basement Finishing in Hackensack",
+    "category": "Interior Renovation",
+    "location": "Hackensack, NJ",
+    "duration": "4 weeks",
+    "budget": "$25,000 - $30,000",
+    "year": "2024",
+    "featured": true,
+    "challenge": "An unfinished basement with moisture issues, poor lighting, and wasted space. The homeowners wanted to create a functional family room and home office without breaking the bank.",
+    "solution": "Installed proper waterproofing and drainage system first. Added insulation, drywall, and recessed lighting throughout. Created distinct zones for entertainment and work with custom built-in shelving. Used moisture-resistant materials and added a bathroom rough-in for future expansion.",
+    "results": [
+      "Added 800 sq ft of finished living space",
+      "Solved moisture problems with comprehensive waterproofing",
+      "Increased home value by $35,000",
+      "Created dedicated home office saving $500/month in co-working fees"
+    ],
+    "testimonial": {
+      "text": "We hired Dependable for a variety of projects including tile work, wood floor repair, and drywall patching. They delivered high-quality work at a reasonable price and even included finishing touches that weren't in the contract.",
+      "author": "Diane S.",
+      "rating": 5
+    },
+    "images": {
+      "before": "/gallery/basement-before.jpg",
+      "after": "/gallery/basement-after.jpg"
+    }
+  },
+  {
+    "id": "patio-door-replacement-fort-lee",
+    "slug": "patio-door-replacement-fort-lee",
+    "title": "Patio Door Replacement in Fort Lee",
+    "category": "Door Installation",
+    "location": "Fort Lee, NJ",
+    "duration": "2 days",
+    "budget": "$3,000 - $5,000",
+    "year": "2024",
+    "featured": false,
+    "challenge": "Old sliding patio door was drafty, difficult to operate, and had broken seals causing condensation between panes. Energy bills were high and the door was a security concern.",
+    "solution": "Removed the old door and installed a premium Andersen 400 Series sliding patio door with Low-E glass and argon fill. Properly insulated and sealed the opening, added new trim work, and ensured perfect operation.",
+    "results": [
+      "Reduced heating costs by 15% in first winter",
+      "Eliminated drafts and condensation issues",
+      "Improved home security with multi-point locking system",
+      "Enhanced curb appeal with modern design"
+    ],
+    "testimonial": {
+      "text": "Very good experience. Answered my call, came on time, and went above and beyond. Detailed oriented and most important, take PRIDE in their work. Something rare today.",
+      "author": "Vincent R.",
+      "rating": 5
+    },
+    "images": {
+      "before": "/gallery/patio-door-before.jpg",
+      "after": "/gallery/patio-door-after.jpg"
+    }
+  }
+]

@@ -1,0 +1,66 @@
+[
+  {
+    "id": "gr1",
+    "author": "Karen M.",
+    "rating": 5,
+    "date": "2024-09-15",
+    "text": "The Contractor was the best. Neat, clean, efficient, friendly and did a top notch job for a reasonable price. Highly recommended.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr2",
+    "author": "Surajit M.",
+    "rating": 5,
+    "date": "2024-08-22",
+    "text": "They refurbished a 20 year cherry wood dining table surface. There were ugly deposits on the table surface. They removed them with light sanding and repolished the surface, Now the table looks like new. Excellent old world craftsmanship. Price was reasonable. I have decided to hire them for other future handyman jobs.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr3",
+    "author": "Robert H.",
+    "rating": 5,
+    "date": "2024-07-10",
+    "text": "We were extremely happy with the job. Sergey and his crew did high quality work at a very reasonable price and they were very gracious, courteous and easy to work with. We would definitely use them again and recommend them to others.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr4",
+    "author": "Diane S.",
+    "rating": 5,
+    "date": "2024-06-18",
+    "text": "We hired Dependable Home Improvement for a variety of home maintenance projects, including tile work, wood floor repair, drywall patching and wood furniture repair. Sergey and his team delivered high-quality work at a reasonable price. They even went above and beyond by including a few finishing touches that weren't part of the contract. They arrived on time, worked efficiently, and left the house clean. We would definitely hire them again and highly recommend their services.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr5",
+    "author": "Elizabeth H.",
+    "rating": 5,
+    "date": "2024-05-25",
+    "text": "Great job kept to the budget could not be happier. Also very good clean up when done. Will use Sergey and Boris again.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr6",
+    "author": "Vincent R.",
+    "rating": 5,
+    "date": "2024-04-12",
+    "text": "Very good experience. Answered my call, called me in advance of coming. Went above and beyond the typical contractor. Detailed oriented and most important, take PRIDE in their work. Something 'rare' today.",
+    "source": "Google",
+    "verified": true
+  },
+  {
+    "id": "gr7",
+    "author": "Bill S.",
+    "rating": 5,
+    "date": "2024-11-22",
+    "text": "ProDependable has done a lot of projects in my home from little things to re-doing large rooms. They are dependable, trustworthy, and do a great job. I was very lucky to find them after using various handy men, plumbers, etc who never seem to get the job done. These guys have been great.",
+    "source": "Google",
+    "location": "Ramsey, NY",
+    "verified": true
+  }
+]

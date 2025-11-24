@@ -1,0 +1,10 @@
+# robots.txt for Dependable Home Improvement
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://dependable-premium.manus.space/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1

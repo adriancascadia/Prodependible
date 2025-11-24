@@ -1,0 +1,343 @@
+{
+  "categories": [
+    {
+      "id": "bathroom",
+      "name": "Bathroom Renovation",
+      "description": "Complete guides for bathroom remodeling projects",
+      "videos": [
+        {
+          "id": 1,
+          "title": "Complete Bathroom Renovation Start to Finish",
+          "youtubeId": "yhSApRE4IG4",
+          "channel": "Fix This Build",
+          "duration": "45:23",
+          "description": "Full bathroom renovation walkthrough covering demolition, plumbing, tiling, and finishing. Perfect for understanding the complete process.",
+          "difficulty": "Advanced",
+          "views": "2.5M"
+        },
+        {
+          "id": 2,
+          "title": "How to Tile a Shower from Start to Finish",
+          "youtubeId": "BR_xpYEZ6iQ",
+          "channel": "The Excellent Laborer",
+          "duration": "32:15",
+          "description": "Detailed shower tiling tutorial including waterproofing, layout, cutting, and grouting techniques.",
+          "difficulty": "Intermediate",
+          "views": "1.8M"
+        },
+        {
+          "id": 3,
+          "title": "Install a Bathroom Vanity and Sink",
+          "youtubeId": "dMai9QEvqi8",
+          "channel": "Home Improvement",
+          "duration": "8:45",
+          "description": "Step-by-step vanity installation including plumbing connections and securing to wall.",
+          "difficulty": "Beginner",
+          "views": "850K"
+        },
+        {
+          "id": 4,
+          "title": "How to Replace a Toilet - Complete Guide",
+          "youtubeId": "YHhAsSoP04c",
+          "channel": "DIY Home Improvement",
+          "duration": "12:30",
+          "description": "Remove old toilet and install new one with proper sealing and connections.",
+          "difficulty": "Beginner",
+          "views": "1.2M"
+        }
+      ]
+    },
+    {
+      "id": "kitchen",
+      "name": "Kitchen Remodeling",
+      "description": "Kitchen renovation and upgrade tutorials",
+      "videos": [
+        {
+          "id": 5,
+          "title": "Kitchen Renovation - Complete Walkthrough",
+          "youtubeId": "IivSoC2AJDg",
+          "channel": "DIY Creators",
+          "duration": "52:18",
+          "description": "Full kitchen remodel from demolition to final touches including cabinets, countertops, and backsplash.",
+          "difficulty": "Advanced",
+          "views": "3.2M"
+        },
+        {
+          "id": 6,
+          "title": "How to Install Kitchen Cabinets",
+          "youtubeId": "5xN9kPD7ddU",
+          "channel": "This Old House",
+          "duration": "15:42",
+          "description": "Professional cabinet installation techniques for perfect alignment and secure mounting.",
+          "difficulty": "Intermediate",
+          "views": "1.5M"
+        },
+        {
+          "id": 7,
+          "title": "Installing a Kitchen Backsplash - Tile Tutorial",
+          "youtubeId": "nRlZAjtEQ_8",
+          "channel": "Home RenoVision DIY",
+          "duration": "18:25",
+          "description": "Complete backsplash installation with layout planning, cutting, and grouting.",
+          "difficulty": "Intermediate",
+          "views": "2.1M"
+        },
+        {
+          "id": 8,
+          "title": "How to Install a Kitchen Faucet",
+          "youtubeId": "gsyx61_kOh8",
+          "channel": "This Old House",
+          "duration": "10:15",
+          "description": "Replace old kitchen faucet with new one including supply line connections.",
+          "difficulty": "Beginner",
+          "views": "980K"
+        }
+      ]
+    },
+    {
+      "id": "flooring",
+      "name": "Flooring Installation",
+      "description": "Guides for installing various types of flooring",
+      "videos": [
+        {
+          "id": 9,
+          "title": "How to Install Hardwood Flooring",
+          "youtubeId": "RTRl-rD_Ju0",
+          "channel": "DIY Flooring Pro",
+          "duration": "22:35",
+          "description": "Complete hardwood floor installation including subfloor prep, layout, and finishing.",
+          "difficulty": "Advanced",
+          "views": "1.9M"
+        },
+        {
+          "id": 10,
+          "title": "Luxury Vinyl Plank Flooring Installation",
+          "youtubeId": "WqyKhSYkpRQ",
+          "channel": "This Old House",
+          "duration": "25:40",
+          "description": "LVP installation tutorial with underlayment, cutting techniques, and transition pieces.",
+          "difficulty": "Beginner",
+          "views": "2.8M"
+        },
+        {
+          "id": 11,
+          "title": "How to Tile a Floor - Complete Guide",
+          "youtubeId": "VVNxXfW_zXY",
+          "channel": "Lowe's Home Improvement",
+          "duration": "28:15",
+          "description": "Tile floor installation from layout and mortar application to grouting and sealing.",
+          "difficulty": "Intermediate",
+          "views": "1.6M"
+        },
+        {
+          "id": 12,
+          "title": "Laminate Flooring Installation Tips and Tricks",
+          "youtubeId": "UMEO2T7dv_8",
+          "channel": "DIY Home Improvement",
+          "duration": "16:50",
+          "description": "Professional techniques for perfect laminate floor installation.",
+          "difficulty": "Beginner",
+          "views": "1.3M"
+        }
+      ]
+    },
+    {
+      "id": "painting",
+      "name": "Painting & Finishing",
+      "description": "Interior and exterior painting techniques",
+      "videos": [
+        {
+          "id": 13,
+          "title": "How to Paint a Room Like a Pro",
+          "youtubeId": "bLbUIevOxzY",
+          "channel": "DIY Creators",
+          "duration": "14:20",
+          "description": "Professional painting techniques including prep, cutting in, and rolling for perfect results.",
+          "difficulty": "Beginner",
+          "views": "2.4M"
+        },
+        {
+          "id": 14,
+          "title": "Painting Kitchen Cabinets - The Right Way",
+          "youtubeId": "i-eDlk2rlN4",
+          "channel": "This Old House",
+          "duration": "35:45",
+          "description": "Transform kitchen cabinets with proper prep, priming, and painting techniques.",
+          "difficulty": "Intermediate",
+          "views": "1.7M"
+        },
+        {
+          "id": 15,
+          "title": "How to Paint Exterior Siding",
+          "youtubeId": "HLQCd3bQvPM",
+          "channel": "House Painting Tips",
+          "duration": "19:30",
+          "description": "Exterior painting guide covering prep, primer, and paint application for lasting results.",
+          "difficulty": "Intermediate",
+          "views": "890K"
+        },
+        {
+          "id": 16,
+          "title": "Drywall Repair and Painting",
+          "youtubeId": "CRXCB_3gLok",
+          "channel": "This Old House",
+          "duration": "11:25",
+          "description": "Fix holes and cracks in drywall and blend paint for invisible repairs.",
+          "difficulty": "Beginner",
+          "views": "1.5M"
+        }
+      ]
+    },
+    {
+      "id": "maintenance",
+      "name": "Home Maintenance",
+      "description": "Essential home maintenance and repair tasks",
+      "videos": [
+        {
+          "id": 17,
+          "title": "Home Maintenance Checklist - What to Do Each Season",
+          "youtubeId": "QLLfQWzopac",
+          "channel": "Everyday Home Repairs",
+          "duration": "18:45",
+          "description": "Seasonal maintenance tasks to keep your home in top condition year-round.",
+          "difficulty": "Beginner",
+          "views": "1.1M"
+        },
+        {
+          "id": 18,
+          "title": "How to Clean and Maintain Gutters",
+          "youtubeId": "xIK7WAhI6fs",
+          "channel": "House Improvements",
+          "duration": "9:30",
+          "description": "Proper gutter cleaning techniques and maintenance to prevent water damage.",
+          "difficulty": "Beginner",
+          "views": "780K"
+        },
+        {
+          "id": 19,
+          "title": "Winterize Your Home - Complete Guide",
+          "youtubeId": "vl36XmODsWc",
+          "channel": "Home Maintenance Pro",
+          "duration": "16:20",
+          "description": "Prepare your home for winter with essential maintenance tasks.",
+          "difficulty": "Beginner",
+          "views": "950K"
+        },
+        {
+          "id": 20,
+          "title": "Fix a Leaky Faucet - All Types",
+          "youtubeId": "SYPFon69vKs",
+          "channel": "The Home Depot",
+          "duration": "13:15",
+          "description": "Repair common faucet leaks in kitchen and bathroom sinks.",
+          "difficulty": "Beginner",
+          "views": "1.4M"
+        },
+        {
+          "id": 21,
+          "title": "HVAC Maintenance - Furnace and AC Care",
+          "youtubeId": "V8n6N2IQoi4",
+          "channel": "This Old House",
+          "duration": "20:10",
+          "description": "Essential HVAC maintenance to improve efficiency and extend system life.",
+          "difficulty": "Intermediate",
+          "views": "820K"
+        }
+      ]
+    },
+    {
+      "id": "plumbing",
+      "name": "Plumbing Repairs",
+      "description": "Common plumbing fixes and installations",
+      "videos": [
+        {
+          "id": 22,
+          "title": "How to Fix a Running Toilet",
+          "youtubeId": "UIvN2s2DjNA",
+          "channel": "DIY Plumbing Tips",
+          "duration": "8:40",
+          "description": "Diagnose and fix common toilet running problems to save water.",
+          "difficulty": "Beginner",
+          "views": "1.6M"
+        },
+        {
+          "id": 23,
+          "title": "Unclog a Drain - Kitchen and Bathroom",
+          "youtubeId": "LpDLynrXln8",
+          "channel": "This Old House",
+          "duration": "10:55",
+          "description": "Clear clogged drains using proper tools and techniques.",
+          "difficulty": "Beginner",
+          "views": "2.1M"
+        },
+        {
+          "id": 24,
+          "title": "Install a Garbage Disposal",
+          "youtubeId": "T2lRKEpX68o",
+          "channel": "This Old House",
+          "duration": "12:20",
+          "description": "Complete garbage disposal installation with electrical and plumbing connections.",
+          "difficulty": "Intermediate",
+          "views": "890K"
+        },
+        {
+          "id": 25,
+          "title": "Replace a Water Heater",
+          "youtubeId": "g90cwh7vvuY",
+          "channel": "Home Repair Tutor",
+          "duration": "24:30",
+          "description": "Water heater replacement including safety, connections, and code compliance.",
+          "difficulty": "Advanced",
+          "views": "1.2M"
+        }
+      ]
+    },
+    {
+      "id": "electrical",
+      "name": "Electrical Work",
+      "description": "Safe electrical repairs and upgrades",
+      "videos": [
+        {
+          "id": 26,
+          "title": "How to Install a Light Fixture",
+          "youtubeId": "XF4NdfyiDSc",
+          "channel": "The Home Depot",
+          "duration": "9:15",
+          "description": "Safely install ceiling lights and chandeliers with proper wiring.",
+          "difficulty": "Beginner",
+          "views": "1.3M"
+        },
+        {
+          "id": 27,
+          "title": "Replace an Electrical Outlet",
+          "youtubeId": "Htg5KwQh6DA",
+          "channel": "Electrical Basics",
+          "duration": "7:30",
+          "description": "Replace old outlets with new ones including GFCI outlets for safety.",
+          "difficulty": "Beginner",
+          "views": "980K"
+        },
+        {
+          "id": 28,
+          "title": "Install a Ceiling Fan",
+          "youtubeId": "ufZs8Ijy4BY",
+          "channel": "DIY Home Improvement",
+          "duration": "15:45",
+          "description": "Complete ceiling fan installation with proper support and wiring.",
+          "difficulty": "Intermediate",
+          "views": "1.5M"
+        },
+        {
+          "id": 29,
+          "title": "Understanding Your Electrical Panel",
+          "youtubeId": "rcV6CwoKwGg",
+          "channel": "Electrical Safety First",
+          "duration": "12:50",
+          "description": "Learn about your home's electrical panel, circuit breakers, and safety.",
+          "difficulty": "Beginner",
+          "views": "750K"
+        }
+      ]
+    }
+  ]
+}

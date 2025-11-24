@@ -1,0 +1,63 @@
+{
+  "reviews": [
+    {
+      "id": 1,
+      "name": "Karen M.",
+      "service": "Residential Service",
+      "rating": 5,
+      "date": "2024-10-15",
+      "text": "The Contractor was the best. Neat, clean, efficient, friendly and did a top notch job for a reasonable price. Highly recommended.",
+      "verified": true
+    },
+    {
+      "id": 2,
+      "name": "Diane S.",
+      "service": "Home Improvement",
+      "rating": 5,
+      "date": "2024-09-22",
+      "text": "Sergey and his team delivered high-quality work at a reasonable price. They even went above and beyond by including finishing touches that weren't part of the contract.",
+      "verified": true
+    },
+    {
+      "id": 3,
+      "name": "Vincent R.",
+      "service": "Contractor Service",
+      "rating": 5,
+      "date": "2024-08-30",
+      "text": "Very good experience. Went above and beyond the typical contractor. Detailed oriented and most important, take PRIDE in their work. Something 'rare' today.",
+      "verified": true
+    },
+    {
+      "id": 4,
+      "name": "Surajit M.",
+      "service": "Furniture Restoration",
+      "rating": 5,
+      "date": "2024-07-18",
+      "text": "They refurbished a 20 year cherry wood dining table surface. Excellent old world craftsmanship. Price was reasonable.",
+      "verified": true
+    },
+    {
+      "id": 5,
+      "name": "Robert H.",
+      "service": "Home Renovation",
+      "rating": 5,
+      "date": "2024-06-25",
+      "text": "We were extremely happy with the job. Sergey and his crew did high quality work at a very reasonable price and they were very gracious and courteous.",
+      "verified": true
+    },
+    {
+      "id": 6,
+      "name": "Elizabeth H.",
+      "service": "General Contracting",
+      "rating": 5,
+      "date": "2024-05-12",
+      "text": "Great job kept to the budget could not be happier. Also very good clean up when done. Will use Sergey and Boris again.",
+      "verified": true
+    }
+  ],
+  "summary": {
+    "totalReviews": 6,
+    "averageRating": 5.0,
+    "lastUpdated": "2024-11-21"
+  }
+}

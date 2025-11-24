@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dependable Home Improvement - Brand Book</title>
+    <style>
+        @page {
+            size: 11in 8.5in landscape;
+            margin: 0.75in;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            color: #36454F;
+            line-height: 1.6;
+        }
+        
+        .page {
+            page-break-after: always;
+            height: 7in;
+            position: relative;
+        }
+        
+        .page:last-child {
+            page-break-after: avoid;
+        }
+        
+        /* Cover Page */
+        .cover-page {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0.5in 0;
+        }
+        
+        .cover-logo {
+            width: 1.8in;
+            margin-bottom: 0.3in;
+        }
+        
+        .cover-title-box {
+            background: #654321;
+            color: white;
+            padding: 0.35in 0.5in;
+            width: 100%;
+            margin-bottom: 0.2in;
+        }
+        
+        .cover-title {
+            font-size: 42pt;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+        
+        .cover-tagline {
+            font-size: 18pt;
+            font-style: italic;
+            color: #654321;
+            margin-bottom: 0.25in;
+        }
+        
+        .cover-intro {
+            font-size: 11pt;
+            max-width: 8in;
+            margin: 0 auto 0.3in;
+            line-height: 1.5;
+        }
+        
+        .cover-footer {
+            font-size: 10pt;
+            color: #36454F;
+            margin-top: auto;
+        }
+        
+        /* Content Pages */
+        h1 {
+            font-size: 32pt;
+            color: #654321;
+            margin-bottom: 0.25in;
+        }
+        
+        h2 {
+            font-size: 22pt;
+            color: #B8860B;
+            margin: 0.25in 0 0.15in;
+        }
+        
+        h3 {
+            font-size: 16pt;
+            color: #654321;
+            margin: 0.2in 0 0.1in;
+        }
+        
+        p {
+            font-size: 11pt;
+            margin-bottom: 0.12in;
+            text-align: justify;
+        }
+        
+        .box {
+            background: #F5F5DC;
+            border: 1px solid #654321;
+            padding: 0.15in;
+            margin: 0.1in 0;
+        }
+        
+        .box-title {
+            font-size: 14pt;
+            font-weight: bold;
+            color: #654321;
+            margin-bottom: 0.08in;
+        }
+        
+        ul {
+            margin: 0.1in 0 0.15in 0.25in;
+        }
+        
+        li {
+            font-size: 11pt;
+            margin-bottom: 0.08in;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 0.15in 0;
+            font-size: 9pt;
+        }
+        
+        th {
+            background: #654321;
+            color: white;
+            padding: 0.12in;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        td {
+            padding: 0.12in;
+            border: 1px solid #B8860B;
+        }
+        
+        tr:nth-child(even) {
+            background: #F9F9F9;
+        }
+        
+        .color-swatch {
+            width: 0.8in;
+            height: 0.4in;
+            border: 1px solid #666;
+            display: inline-block;
+        }
+        
+        .logo-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.3in;
+            margin: 0.2in 0;
+            text-align: center;
+        }
+        
+        .logo-comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0.15in;
+            margin: 0.2in 0;
+            text-align: center;
+        }
+        
+        .logo-comparison-grid img {
+            max-width: 100%;
+            max-height: 2in;
+            height: auto;
+        }
+        
+        .logo-grid img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .current-logo-container {
+            text-align: center;
+            margin: 0.2in 0;
+        }
+        
+        .current-logo-container img {
+            max-width: 2in;
+            height: auto;
+        }
+        
+        .font-example {
+            text-align: center;
+            margin: 0.15in 0;
+            page-break-inside: avoid;
+        }
+        
+        .font-example-text {
+            margin-bottom: 0.05in;
+        }
+        
+        .font-caption {
+            font-size: 9pt;
+            font-style: italic;
+            color: #666;
+        }
+        
+        .page-number {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            font-size: 9pt;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="page cover-page">
+    <img src="dependable_current_logo.png" alt="Dependable Home Improvement" class="cover-logo">
+    
+    <div class="cover-title-box">
+        <div class="cover-title">Brand Identity and Design Standards</div>
+    </div>
+    
+    <div class="cover-tagline">Crafting Excellence. Building Trust.</div>
+    
+    <p class="cover-intro">
+        Dependable Home Improvement is a premier home services provider specializing in handyman services, carpentry, painting, and complete home renovations throughout Bergen County, New Jersey. Established in 2004, the company has built an exceptional reputation for craftsmanship, reliability, and customer service over more than 20 years.
+    </p>
+    
+    <div class="cover-footer">Prepared by Cascadia Managing Brands</div>
+</div>
+
+<!-- PAGE 2: WHY DEPENDABLE -->
+<div class="page">
+    <h1>Why Dependable Home Improvement?</h1>
+    
+    <h2>Our Unique Selling Proposition</h2>
+    <p>In a crowded home improvement marketplace, Dependable Home Improvement stands apart through a combination of proven expertise, transparent business practices, and unwavering commitment to customer satisfaction.</p>
+    
+    <div class="box">
+        <div class="box-title">20+ Years of Proven Excellence</div>
+        Unlike fly-by-night contractors or newly established businesses, Dependable Home Improvement has served Bergen County continuously since 2004. This longevity demonstrates financial stability, consistent quality, and a track record that speaks for itself. Over 1,500 completed projects provide proof of capability across every type of home improvement need.
+    </div>
+    
+    <div class="box">
+        <div class="box-title">Licensed, Insured & Accountable</div>
+        Many handyman services operate without proper licensing or insurance, putting homeowners at significant risk. Dependable Home Improvement maintains full licensing, comprehensive liability insurance, and workers' compensation coverage. This protects clients from liability and ensures professional accountability for every project.
+    </div>
+    
+    <div class="box">
+        <div class="box-title">Transparent Pricing & Written Estimates</div>
+        No hidden fees. No surprise charges. No vague verbal quotes. Every project begins with a detailed written estimate that clearly outlines scope, materials, timeline, and total cost. This transparency eliminates the anxiety and uncertainty that often accompanies home improvement projects.
+    </div>
+    
+    <div class="page-number">Page 2</div>
+</div>
+
+<!-- PAGE 3: RISKS OF COMPETITORS -->
+<div class="page">
+    <h2>The Risks of Working with Lesser-Known Contractors</h2>
+    <p>Homeowners who choose unlicensed or inexperienced contractors face significant risks:</p>
+    
+    <ul>
+        <li><strong>Liability Exposure:</strong> Without proper insurance, homeowners may be liable for injuries or property damage</li>
+        <li><strong>No Recourse:</strong> Unlicensed contractors often disappear when problems arise, leaving homeowners with no legal recourse</li>
+        <li><strong>Code Violations:</strong> Improper work can result in failed inspections, fines, and costly corrections</li>
+        <li><strong>Poor Workmanship:</strong> Inexperienced contractors may lack the skills to deliver quality results</li>
+        <li><strong>Project Abandonment:</strong> Financially unstable contractors may abandon projects mid-completion</li>
+    </ul>
+    
+    <p style="margin-top: 0.2in;"><strong>Dependable Home Improvement eliminates these risks.</strong> Our established reputation, proper licensing, comprehensive insurance, and 20+ year track record provide peace of mind that your home improvement investment is protected.</p>
+    
+    <h2 style="margin-top: 0.3in;">Brand Values</h2>
+    
+    <div class="box">
+        <div class="box-title">Excellence in Craftsmanship</div>
+        We take pride in delivering superior workmanship on every project. Our team consists of skilled professionals who treat each home as if it were their own. Every detail matters—from precise measurements to clean finishes to proper material selection.
+    </div>
+    
+    <div class="box">
+        <div class="box-title">Reliability & Dependability</div>
+        Our name reflects our core commitment. Clients can count on us to show up on time, complete work as promised, and stand behind our results with a 100% satisfaction guarantee. When we commit to something, we deliver.
+    </div>
+    
+    <div class="page-number">Page 3</div>
+</div>
+
+<!-- PAGE 4: LOGO COMPARISON -->
+<div class="page">
+    <h1 style="text-align: center; margin-bottom: 0.3in;">Logo Options</h1>
+    
+    <!-- Current Logo Section -->
+    <div style="text-align: center; margin-bottom: 0.5in;">
+        <p style="font-size: 12pt; font-weight: bold; margin-bottom: 0.2in;">Current Logo</p>
+        <img src="dependable_current_logo.png" alt="Current Logo" style="max-width: 2.5in; height: auto;">
+    </div>
+    
+    <!-- New Concepts Row -->
+    <div style="display: flex; flex-direction: row; justify-content: space-between; gap: 0.3in; margin-top: 0.4in;">
+        <div style="text-align: center; flex: 1;">
+            <p style="font-size: 11pt; font-weight: bold; margin-bottom: 0.15in;">Concept 1</p>
+            <img src="Dependable_Logo_Concept_1.png" alt="Concept 1" style="max-width: 2.2in; height: auto;">
+        </div>
+        <div style="text-align: center; flex: 1;">
+            <p style="font-size: 11pt; font-weight: bold; margin-bottom: 0.15in;">Concept 2</p>
+            <img src="Dependable_Logo_Concept_2.png" alt="Concept 2" style="max-width: 2.2in; height: auto;">
+        </div>
+        <div style="text-align: center; flex: 1;">
+            <p style="font-size: 11pt; font-weight: bold; margin-bottom: 0.15in;">Concept 3</p>
+            <img src="Dependable_Logo_Concept_3.png" alt="Concept 3" style="max-width: 2.2in; height: auto;">
+        </div>
+    </div>
+    
+    <div class="page-number">Page 4</div>
+</div>delines</h2>
+    
+    <h3>Minimum Size Requirements</h3>
+    <ul>
+        <li><strong>Print:</strong> Minimum 1.5 inches wide</li>
+        <li><strong>Digital:</strong> Minimum 150 pixels wide</li>
+    </ul>
+    
+    <h3>Logo Do's and Don'ts</h3>
+    <ul>
+        <li>✓ Use approved logo files</li>
+        <li>✓ Maintain proper aspect ratio</li>
+        <li>✗ Do not stretch or distort</li>
+        <li>✗ Do not change colors</li>
+    </ul>
+    
+    <div class="page-number">Page 4</div>
+</div>
+
+<!-- PAGE 5: COLOR PALETTE -->
+<div class="page">
+    <h1>Color Palette</h1>
+    
+    <h2>Primary Brand Colors</h2>
+    <p>The Dependable Home Improvement color palette was strategically selected to convey reliability, craftsmanship, and premium quality.</p>
+    
+    <table>
+        <tr>
+            <th>Color Swatch</th>
+            <th>Color Name</th>
+            <th>Hex</th>
+            <th>RGB</th>
+            <th>CMYK</th>
+            <th>Usage</th>
+        </tr>
+        <tr>
+            <td><div class="color-swatch" style="background: #654321;"></div></td>
+            <td>Dependable Brown</td>
+            <td>#654321</td>
+            <td>101, 67, 33</td>
+            <td>0, 34, 67, 60</td>
+            <td>Primary backgrounds, headers</td>
+        </tr>
+        <tr>
+            <td><div class="color-swatch" style="background: #B8860B;"></div></td>
+            <td>Premium Gold</td>
+            <td>#B8860B</td>
+            <td>184, 134, 11</td>
+            <td>0, 27, 94, 28</td>
+            <td>Accents, CTAs, highlights</td>
+        </tr>
+        <tr>
+            <td><div class="color-swatch" style="background: #F5F5DC;"></div></td>
+            <td>Warm Cream</td>
+            <td>#F5F5DC</td>
+            <td>245, 245, 220</td>
+            <td>0, 0, 10, 4</td>
+            <td>Backgrounds, sections</td>
+        </tr>
+        <tr>
+            <td><div class="color-swatch" style="background: #36454F;"></div></td>
+            <td>Charcoal</td>
+            <td>#36454F</td>
+            <td>54, 69, 79</td>
+            <td>32, 13, 0, 69</td>
+            <td>Body text, secondary</td>
+        </tr>
+        <tr>
+            <td><div class="color-swatch" style="background: #FFFFFF; border: 2px solid #666;"></div></td>
+            <td>White</td>
+            <td>#FFFFFF</td>
+            <td>255, 255, 255</td>
+            <td>0, 0, 0, 0</td>
+            <td>Backgrounds, text</td>
+        </tr>
+    </table>
+    
+    <div class="page-number">Page 5</div>
+</div>
+
+<!-- PAGE 6: TYPOGRAPHY EXAMPLES -->
+<div class="page">
+    <h1>Typography System</h1>
+    
+    <h2>Exclusive Brand Fonts</h2>
+    <p>Dependable Home Improvement uses <strong>two exclusive typefaces</strong> for all brand communications. Consistency in typography strengthens brand recognition and maintains professional appearance across all materials.</p>
+    
+    <h3>Primary Font: Playfair Display (Serif)</h3>
+    <p><strong>Usage:</strong> Headlines, hero text, section headings, taglines, and any display typography</p>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 48pt; font-weight: bold; color: #654321;">Dependable Home Improvement</div>
+        <div class="font-caption">48pt Bold - Main Headlines</div>
+    </div>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 36pt; font-weight: bold; color: #654321;">Crafting Excellence, Building Trust</div>
+        <div class="font-caption">36pt Bold - Section Headlines</div>
+    </div>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 24pt; font-weight: bold; color: #654321;">Your Trusted Bergen County Partner</div>
+        <div class="font-caption">24pt Regular - Subheadings</div>
+    </div>
+    
+    <div class="page-number">Page 6</div>
+</div>
+
+<!-- PAGE 7: TYPOGRAPHY CONTINUED -->
+<div class="page">
+    <h3>Secondary Font: Helvetica / Arial (Sans-Serif)</h3>
+    <p><strong>Usage:</strong> Body text, descriptions, navigation, buttons, captions, and all functional typography</p>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 18pt;">We transform houses into homes through expert craftsmanship</div>
+        <div class="font-caption">18pt Regular - Large Body Text</div>
+    </div>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 16pt;">Professional handyman services, carpentry, painting, and renovations</div>
+        <div class="font-caption">16pt Regular - Standard Body Text / Navigation</div>
+    </div>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 14pt;">Serving Bergen County with pride for over 20 years</div>
+        <div class="font-caption">14pt Regular - Small Body Text / Captions</div>
+    </div>
+    
+    <div class="font-example">
+        <div class="font-example-text" style="font-size: 11pt;">Licensed • Insured • Trusted • Local</div>
+        <div class="font-caption">11pt Regular - Fine Print / Footnotes</div>
+    </div>
+    
+    <p style="margin-top: 0.3in; background: #FFF9E6; border: 1px solid #B8860B; padding: 0.12in;"><strong>Important:</strong> These are the ONLY two typefaces approved for Dependable Home Improvement brand materials. Never substitute with other fonts, even if they appear similar.</p>
+    
+    <h2 style="margin-top: 0.3in;">Typography Specifications</h2>
+    
+    <table>
+        <tr>
+            <th>Element</th>
+            <th>Font</th>
+            <th>Size</th>
+            <th>Weight</th>
+            <th>Color</th>
+        </tr>
+        <tr>
+            <td>H1 Headlines</td>
+            <td>Playfair Display</td>
+            <td>48-64px</td>
+            <td>Bold</td>
+            <td>Brown/White</td>
+        </tr>
+        <tr>
+            <td>H2 Headings</td>
+            <td>Playfair Display</td>
+            <td>36-48px</td>
+            <td>Bold</td>
+            <td>Brown/Gold</td>
+        </tr>
+        <tr>
+            <td>Body Text</td>
+            <td>Helvetica/Arial</td>
+            <td>16-18px</td>
+            <td>Regular</td>
+            <td>Charcoal</td>
+        </tr>
+        <tr>
+            <td>Navigation</td>
+            <td>Helvetica/Arial</td>
+            <td>16px</td>
+            <td>Regular</td>
+            <td>Brown</td>
+        </tr>
+        <tr>
+            <td>Buttons</td>
+            <td>Helvetica/Arial</td>
+            <td>16-18px</td>
+            <td>Bold</td>
+            <td>White on Gold</td>
+        </tr>
+    </table>
+    
+    <div class="page-number">Page 7</div>
+</div>
+
+<!-- PAGE 8: BRAND VOICE & CONCLUSION -->
+<div class="page">
+    <h1>Brand Voice & Messaging</h1>
+    
+    <h2>Tone of Voice</h2>
+    <p>Dependable Home Improvement's brand voice is <strong>professional yet approachable, confident yet humble, expert yet educational</strong>.</p>
+    
+    <h3>Brand Messaging Pillars</h3>
+    
+    <div class="box">
+        <div class="box-title">1. Craftsmanship Excellence</div>
+        We craft solutions. Every detail matters.
+    </div>
+    
+    <div class="box">
+        <div class="box-title">2. Reliability You Can Count On</div>
+        When we commit, we deliver.
+    </div>
+    
+    <div class="box">
+        <div class="box-title">3. Transparent Partnership</div>
+        No hidden fees. No surprises.
+    </div>
+    
+    <h1 style="margin-top: 0.4in;">Maintaining Brand Consistency</h1>
+    
+    <p>The Dependable Home Improvement brand represents over 20 years of commitment to excellence, reliability, and customer satisfaction. These brand guidelines ensure that every interaction reinforces the values and quality that have made Dependable Home Improvement a trusted name in Bergen County.</p>
+    
+    <div class="box" style="margin-top: 0.2in;">
+        <div class="box-title">Remember</div>
+        Every project is a brand ambassador. Every customer interaction is a brand experience. Every material we produce represents our commitment to excellence.
+    </div>
+    
+    <p style="text-align: center; margin-top: 0.4in; font-size: 10pt;">© 2025 Cascadia Managing Brands. All Rights Reserved.</p>
+    
+    <div class="page-number">Page 8</div>
+</div>
+
+</body>
+</html>

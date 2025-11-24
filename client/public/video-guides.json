@@ -1,0 +1,66 @@
+[
+  {
+    "id": "deck-maintenance",
+    "title": "Deck Maintenance 101",
+    "description": "Learn how to properly maintain your deck to extend its lifespan and keep it looking beautiful year-round.",
+    "duration": "8:45",
+    "category": "Decks",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/gallery/deck-reconstruction-after.jpg",
+    "tips": [
+      "Clean your deck twice a year with deck cleaner",
+      "Inspect for loose boards and protruding nails annually",
+      "Reseal or restain every 2-3 years",
+      "Clear debris from between boards to prevent rot",
+      "Trim nearby vegetation to improve air circulation"
+    ]
+  },
+  {
+    "id": "door-weatherstripping",
+    "title": "How to Check Door Weatherstripping",
+    "description": "Simple steps to identify and replace worn weatherstripping to save on energy costs.",
+    "duration": "5:30",
+    "category": "Doors",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/gallery/patio-door-after.jpg",
+    "tips": [
+      "Check for light gaps around closed doors",
+      "Feel for drafts on windy days",
+      "Replace weatherstripping every 5-7 years",
+      "Use appropriate type for each door location",
+      "Ensure proper door alignment before replacing strips"
+    ]
+  },
+  {
+    "id": "basement-moisture-prevention",
+    "title": "Preventing Basement Moisture",
+    "description": "Protect your basement from moisture damage with these proven prevention techniques.",
+    "duration": "10:15",
+    "category": "Basements",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/gallery/basement-after.jpg",
+    "tips": [
+      "Ensure gutters and downspouts direct water away from foundation",
+      "Grade soil away from house foundation",
+      "Use a dehumidifier to maintain 30-50% humidity",
+      "Seal cracks in foundation walls promptly",
+      "Install a sump pump in flood-prone areas"
+    ]
+  },
+  {
+    "id": "wood-furniture-refinishing",
+    "title": "Refinishing Wood Furniture",
+    "description": "Restore old wood furniture to its former glory with professional refinishing techniques.",
+    "duration": "12:20",
+    "category": "Carpentry",
+    "videoUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+    "thumbnail": "/gallery/deck-refinishing-after.jpg",
+    "tips": [
+      "Strip old finish completely before sanding",
+      "Sand with progressively finer grits (80→120→220)",
+      "Apply stain in direction of wood grain",
+      "Use multiple thin coats of finish instead of one thick coat",
+      "Allow proper drying time between coats"
+    ]
+  }
+]

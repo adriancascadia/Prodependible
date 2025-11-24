@@ -1,0 +1,20 @@
+{
+  "team": [
+    {
+      "name": "Sergey Kozlov",
+      "title": "Founder & Master Craftsman",
+      "experience": "30+ years",
+      "specialty": "Custom Decks & Structural Work",
+      "bio": "With over 30 years of construction experience and having founded Dependable Home Improvement in August 2017, Sergey delivers exceptional craftsmanship and honest service. His expertise in custom deck construction and structural renovations has earned the trust of hundreds of homeowners across Bergen County.",
+      "image": "/team-sergey.jpg"
+    },
+    {
+      "name": "Boris Petrov",
+      "title": "Lead Project Manager",
+      "experience": "20+ years",
+      "specialty": "Interior Renovations & Project Coordination",
+      "bio": "Boris brings two decades of construction expertise to every project. As Lead Project Manager, he ensures seamless coordination, quality control, and timely completion. His attention to detail and commitment to client satisfaction make every renovation a success.",
+      "image": "/team-boris.jpg"
+    }
+  ]
+}

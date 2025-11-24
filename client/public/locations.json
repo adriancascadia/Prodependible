@@ -1,0 +1,82 @@
+[
+  {
+    "slug": "hackensack-nj",
+    "city": "Hackensack",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07601",
+    "description": "Professional home improvement services in Hackensack, NJ. Serving Bergen County with deck building, door installation, and interior remodeling.",
+    "population": "46,000+",
+    "features": ["County Seat", "Historic Downtown", "Diverse Community"]
+  },
+  {
+    "slug": "teaneck-nj",
+    "city": "Teaneck",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07666",
+    "description": "Trusted home improvement contractor in Teaneck, NJ. Expert deck refinishing, basement finishing, and custom carpentry services.",
+    "population": "41,000+",
+    "features": ["Family-Friendly", "Excellent Schools", "Vibrant Community"]
+  },
+  {
+    "slug": "fort-lee-nj",
+    "city": "Fort Lee",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07024",
+    "description": "Quality home renovation services in Fort Lee, NJ. Specializing in patio doors, cellar doors, and structural repairs.",
+    "population": "37,000+",
+    "features": ["George Washington Bridge", "High-Rise Living", "NYC Views"]
+  },
+  {
+    "slug": "fair-lawn-nj",
+    "city": "Fair Lawn",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07410",
+    "description": "Dependable home improvement in Fair Lawn, NJ. Professional deck construction, door replacement, and interior renovations.",
+    "population": "34,000+",
+    "features": ["Suburban Charm", "Top-Rated Schools", "Community Parks"]
+  },
+  {
+    "slug": "bergenfield-nj",
+    "city": "Bergenfield",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07621",
+    "description": "Expert home improvement services in Bergenfield, NJ. Deck building, basement finishing, and custom carpentry solutions.",
+    "population": "28,000+",
+    "features": ["Diverse Community", "Historic Borough", "Easy NYC Access"]
+  },
+  {
+    "slug": "paramus-nj",
+    "city": "Paramus",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07652",
+    "description": "Premium home renovation in Paramus, NJ. Specializing in deck restoration, door installation, and structural work.",
+    "population": "27,000+",
+    "features": ["Shopping Hub", "Business Center", "Residential Neighborhoods"]
+  },
+  {
+    "slug": "ridgewood-nj",
+    "city": "Ridgewood",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07450",
+    "description": "High-quality home improvement in Ridgewood, NJ. Custom decks, interior remodeling, and professional carpentry services.",
+    "population": "26,000+",
+    "features": ["Award-Winning Schools", "Upscale Community", "Village Atmosphere"]
+  },
+  {
+    "slug": "englewood-nj",
+    "city": "Englewood",
+    "state": "NJ",
+    "county": "Bergen County",
+    "zip": "07631",
+    "description": "Trusted contractor in Englewood, NJ. Expert deck building, basement renovations, and door installation services.",
+    "population": "29,000+",
+    "features": ["Cultural Hub", "Historic City", "Diverse Population"]
+  }
+]

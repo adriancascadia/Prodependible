@@ -1,0 +1,196 @@
+{
+  "categories": [
+    {
+      "id": "getting-started",
+      "name": "Getting Started",
+      "icon": "🚀",
+      "questions": [
+        {
+          "id": 1,
+          "question": "How do I get started with my home improvement project?",
+          "answer": "Getting started is easy! Simply call us at (201) 637-4345 or fill out our online contact form. We'll schedule a free consultation at your home to discuss your vision, assess the space, take measurements, and provide expert recommendations. There's no obligation, and we'll answer all your questions."
+        },
+        {
+          "id": 2,
+          "question": "Do you offer free estimates?",
+          "answer": "Yes! We provide completely free, no-obligation estimates for all projects. During the estimate, we'll visit your home, discuss your goals and budget, take detailed measurements, and provide a comprehensive written quote. Our estimates are itemized so you know exactly what you're paying for."
+        },
+        {
+          "id": 3,
+          "question": "What areas do you serve?",
+          "answer": "We proudly serve all of Bergen County, NJ, including Hackensack, Teaneck, Fort Lee, Fair Lawn, Bergenfield, Paramus, Ridgewood, Englewood, and surrounding communities within a 25-mile radius. If you're unsure whether we serve your area, just give us a call!"
+        },
+        {
+          "id": 4,
+          "question": "Are you licensed and insured?",
+          "answer": "Absolutely! We are fully licensed with the State of New Jersey (Home Improvement Contractor License) and carry comprehensive general liability insurance and workers' compensation coverage. We can provide proof of insurance upon request, and we handle all necessary permits for your project."
+        },
+        {
+          "id": 5,
+          "question": "What types of projects do you handle?",
+          "answer": "We handle a wide range of home improvement projects including kitchen and bathroom renovations, basement finishing, flooring installation, painting (interior and exterior), deck building and repair, siding replacement, window and door installation, and general carpentry. If you have a specific project in mind, just ask!"
+        }
+      ]
+    },
+    {
+      "id": "timeline-scheduling",
+      "name": "Timeline & Scheduling",
+      "icon": "📅",
+      "questions": [
+        {
+          "id": 6,
+          "question": "How long will my project take?",
+          "answer": "Project timelines vary based on scope and complexity. A bathroom renovation typically takes 3-4 weeks, kitchen remodels 4-8 weeks, and basement finishing 4-6 weeks. During your free consultation, we'll provide a detailed timeline specific to your project. We pride ourselves on completing projects on schedule."
+        },
+        {
+          "id": 7,
+          "question": "Can I live in my home during the renovation?",
+          "answer": "In most cases, yes! We work to minimize disruption to your daily life. For kitchen renovations, we can set up a temporary kitchen in another room. For bathroom projects, we recommend having access to another bathroom. We maintain clean work areas, use dust barriers, and clean up thoroughly each day."
+        },
+        {
+          "id": 8,
+          "question": "What are your working hours?",
+          "answer": "Our standard working hours are Monday through Friday, 8:00 AM to 5:00 PM. We can accommodate special scheduling needs and discuss weekend work for projects that require it. We'll always coordinate our schedule with yours to minimize disruption."
+        },
+        {
+          "id": 9,
+          "question": "How far in advance should I book my project?",
+          "answer": "We recommend booking 4-8 weeks in advance, especially during our busy season (spring and summer). However, we understand that some projects are urgent, and we'll do our best to accommodate your timeline. Contact us as soon as you're ready to discuss your project."
+        },
+        {
+          "id": 10,
+          "question": "What happens if the project takes longer than expected?",
+          "answer": "While we strive to complete all projects on schedule, unexpected issues can arise (hidden water damage, outdated wiring, etc.). If delays occur, we communicate immediately, explain the situation, discuss solutions, and adjust the timeline. We never leave a project incomplete."
+        }
+      ]
+    },
+    {
+      "id": "pricing-payment",
+      "name": "Pricing & Payment",
+      "icon": "💰",
+      "questions": [
+        {
+          "id": 11,
+          "question": "How much will my project cost?",
+          "answer": "Project costs vary widely based on size, materials, and complexity. During your free consultation, we'll discuss your budget and provide options at different price points. Our written estimates are detailed and itemized, so you know exactly what you're paying for. We never have hidden fees."
+        },
+        {
+          "id": 12,
+          "question": "What payment methods do you accept?",
+          "answer": "We accept checks, credit cards (Visa, MasterCard, American Express, Discover), and bank transfers. We never require cash-only payments. All payments are documented with receipts for your records."
+        },
+        {
+          "id": 13,
+          "question": "What is your payment schedule?",
+          "answer": "We typically require a small deposit (10-20%) to schedule your project and order materials. The remaining balance is divided into milestone payments based on project completion. Final payment is due upon project completion and your satisfaction. We comply with all New Jersey payment regulations."
+        },
+        {
+          "id": 14,
+          "question": "Do you offer financing options?",
+          "answer": "Yes! We work with several financing partners to offer flexible payment plans for qualified homeowners. Options include 0% interest for 12 months, low-interest extended terms, and same-day approval. Ask about financing during your consultation."
+        },
+        {
+          "id": 15,
+          "question": "Can I make changes to the project after we start?",
+          "answer": "Yes, changes can be made, but they may affect the timeline and cost. We handle all changes through written change orders that detail the modification, cost impact, and timeline adjustment. This protects both you and us and ensures clear communication."
+        }
+      ]
+    },
+    {
+      "id": "project-management",
+      "name": "Project Management",
+      "icon": "🔧",
+      "questions": [
+        {
+          "id": 16,
+          "question": "Who will be working on my project?",
+          "answer": "Your project will be managed by one of our experienced project managers (Sergey or Boris) who will be your main point of contact. The actual work is performed by our skilled craftsmen who have years of experience. We do not use day laborers—all workers are trained professionals."
+        },
+        {
+          "id": 17,
+          "question": "Will you handle permits and inspections?",
+          "answer": "Yes! We handle all necessary permits and coordinate required inspections with your local building department. Permit costs are included in your estimate. We ensure all work meets or exceeds local building codes and regulations."
+        },
+        {
+          "id": 18,
+          "question": "How do you protect my home during construction?",
+          "answer": "We take protection seriously! We use floor protection, dust barriers, and plastic sheeting to protect your belongings and unaffected areas. We clean up thoroughly at the end of each day, remove debris regularly, and treat your home with respect. Many clients tell us they're impressed by how clean we keep the work area."
+        },
+        {
+          "id": 19,
+          "question": "How often will I receive updates on my project?",
+          "answer": "Your project manager will provide daily updates, either in person at the job site or via phone/text. We also schedule weekly check-in meetings to review progress, address any concerns, and discuss upcoming work. You'll never be left wondering what's happening with your project."
+        },
+        {
+          "id": 20,
+          "question": "What if I'm not satisfied with something?",
+          "answer": "Your satisfaction is our top priority. If you're not happy with any aspect of the work, tell us immediately. We'll address the issue promptly and make it right. We don't consider a project complete until you're 100% satisfied. That's the Dependable difference."
+        }
+      ]
+    },
+    {
+      "id": "materials-design",
+      "name": "Materials & Design",
+      "icon": "🎨",
+      "questions": [
+        {
+          "id": 21,
+          "question": "Can I choose my own materials and finishes?",
+          "answer": "Absolutely! We encourage client involvement in material selection. We can guide you to showrooms, provide samples, and offer expert recommendations based on your style and budget. You have final say on all materials, colors, and finishes."
+        },
+        {
+          "id": 22,
+          "question": "Do you provide design services?",
+          "answer": "Yes! We offer design consultation as part of our service. We'll help you plan layouts, choose materials, select colors, and create a cohesive design. For complex projects, we can recommend professional designers we work with regularly."
+        },
+        {
+          "id": 23,
+          "question": "What quality of materials do you use?",
+          "answer": "We use high-quality, name-brand materials from reputable manufacturers. We offer options at various price points—good, better, and best—so you can choose what fits your budget. We never use cheap or inferior materials that will fail prematurely."
+        },
+        {
+          "id": 24,
+          "question": "Can you work with materials I've already purchased?",
+          "answer": "In some cases, yes. However, we cannot warranty materials we didn't supply, and we need to inspect them first to ensure they're appropriate for the application. We recommend letting us source materials to ensure quality, proper quantities, and warranty coverage."
+        },
+        {
+          "id": 25,
+          "question": "Do you offer eco-friendly or sustainable options?",
+          "answer": "Yes! We offer many environmentally friendly options including low-VOC paints, sustainable wood products, energy-efficient windows and doors, LED lighting, water-saving fixtures, and recycled/recyclable materials. Ask about green options during your consultation."
+        }
+      ]
+    },
+    {
+      "id": "warranty-maintenance",
+      "name": "Warranty & Maintenance",
+      "icon": "🛡️",
+      "questions": [
+        {
+          "id": 26,
+          "question": "Do you offer warranties on your work?",
+          "answer": "Yes! We provide a comprehensive warranty on all workmanship. The specific terms vary by project type, but typically we offer a 1-year warranty on labor and pass through manufacturer warranties on materials (which can be 5-25 years depending on the product). We stand behind our work."
+        },
+        {
+          "id": 27,
+          "question": "What does your warranty cover?",
+          "answer": "Our warranty covers defects in workmanship and installation. This includes things like improper installation, failed joints, finish problems, and structural issues related to our work. Normal wear and tear, damage from misuse, and acts of nature are not covered. We'll provide full warranty details in writing."
+        },
+        {
+          "id": 28,
+          "question": "What if something goes wrong after the project is complete?",
+          "answer": "Simply call us! If there's a warranty issue, we'll come out promptly to assess and repair it at no charge. Even for non-warranty issues, we're happy to provide service—many clients become repeat customers for maintenance and future projects."
+        },
+        {
+          "id": 29,
+          "question": "Do you offer maintenance services?",
+          "answer": "Yes! We offer ongoing maintenance services for past clients including seasonal maintenance, minor repairs, touch-ups, and preventive care. It's a great way to protect your investment and keep your home in top condition."
+        },
+        {
+          "id": 30,
+          "question": "How long will my renovation last?",
+          "answer": "With proper maintenance, our renovations are built to last decades. Quality materials, expert installation, and regular maintenance are key. We use techniques and materials designed for longevity, not just immediate appearance. Many of our kitchen and bathroom renovations from 15-20 years ago are still going strong."
+        }
+      ]
+    }
+  ]
+}
