@@ -3,7 +3,7 @@ import { locations, type LocationData } from "@/data/locations";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Phone, MapPin, CheckCircle, Star } from "lucide-react";
-import { APP_LOGO, APP_TITLE } from "@/const";
+import { APP_LOGO, APP_TITLE } from "@/const.ts";
 
 export default function LocationPage() {
   const [, params] = useRoute("/locations/:slug");
