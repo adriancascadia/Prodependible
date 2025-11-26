@@ -45,7 +45,7 @@ export default function FAQ() {
     {
       category: "Getting Started",
       question: "How do I get a quote for my project?",
-      answer: "Getting a quote is easy! You can call us at (201) 637-4345, fill out our online contact form, or request an estimate through our website. We'll schedule a free consultation to discuss your project, take measurements, and provide a detailed written estimate within 24-48 hours."
+      answer: "Getting a quote is easy! You can call us at (201) 637-4343, fill out our online contact form, or request an estimate through our website. We'll schedule a free consultation to discuss your project, take measurements, and provide a detailed written estimate within 24-48 hours."
     },
     {
       category: "Getting Started",
@@ -55,12 +55,12 @@ export default function FAQ() {
     {
       category: "Getting Started",
       question: "What areas do you serve?",
-      answer: "We primarily serve Bergen County, Passaic County, Hudson County, Essex County, Morris County, and parts of Rockland County, NY. We're based in Northern New Jersey and typically work within a 25-mile radius. If you're outside this area, give us a call—we may be able to accommodate your project."
+      answer: "We primarily serve Bergen County and Passaic County. We're based in Northern New Jersey and typically work within a 15-mile radius. If you're outside this area, give us a call—we may be able to accommodate your project."
     },
     {
       category: "Services & Pricing",
       question: "What types of projects do you handle?",
-      answer: "We handle a wide range of home improvement projects including handyman services, carpentry, painting (interior and exterior), flooring installation, kitchen and bathroom renovations, deck building and repair, drywall work, and general contracting. If you have a specific project in mind, just ask!"
+      answer: "We handle a wide range of home improvement projects including handyman services, carpentry, painting (interior and exterior), flooring installation and kitchen renovations, deck building and repair, drywall work, and general contracting. If you have a specific project in mind, just ask!"
     },
     {
       category: "Services & Pricing",
@@ -110,7 +110,7 @@ export default function FAQ() {
     {
       category: "Payment & Contracts",
       question: "What payment methods do you accept?",
-      answer: "We accept cash, checks, credit cards, and electronic payments. For larger projects, we typically work on a payment schedule tied to project milestones rather than requiring full payment upfront."
+      answer: "We accept Cash, Check, Zelle, Venmo and PayPal payments. For larger projects, we typically work on a payment schedule tied to project milestones rather than requiring full payment upfront."
     },
     {
       category: "Payment & Contracts",

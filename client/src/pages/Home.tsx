@@ -18,6 +18,7 @@ import Newsletter from "@/components/Newsletter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import NewsletterSignup from "@/components/NewsletterSignup";
 import ReviewWidgets from "@/components/ReviewWidgets";
+import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
 import VideoTestimonials from "@/components/VideoTestimonials";
 import ProjectShowcaseVideo from "@/components/ProjectShowcaseVideo";
@@ -28,6 +29,7 @@ export default function Home() {
   const [statsVisible, setStatsVisible] = useState(false);
   const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, rating: 0 });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { t } = useLanguage();
 
   // Inject LocalBusiness schema for SEO
   useEffect(() => {
@@ -105,34 +107,34 @@ export default function Home() {
               <img src="/logo-concept3.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
               <div className="max-w-[180px]">
                 <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
-                  Dependable Home<br />Improvement
+                  {t('header.title')}
                 </h1>
                 <p className={`text-xs font-medium transition-colors ${scrolled ? "text-secondary" : "text-secondary"}`}>
-                  Premium Quality Since 2017
+                  {t('header.subtitle')}
                 </p>
               </div>
             </div>
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
               <Link href="/services" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Services
+                {t('nav.services')}
               </Link>
               <a href="#gallery" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Gallery
+                {t('nav.gallery')}
               </a>
               <Link href="/blog" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Blog
+                {t('nav.blog')}
               </Link>
               <Link href="/videos" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Videos
+                {t('nav.videos')}
               </Link>
               <Link href="/faq" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                FAQ
+                {t('nav.faq')}
               </Link>
               <Link href="/team" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Our Team
+                {t('nav.team')}
               </Link>
               <a href="#contact" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                Contact
+                {t('nav.contact')}
               </a>
               <Link href="/search">
                 <Button 
@@ -143,12 +145,15 @@ export default function Home() {
                   <Search className="h-5 w-5" />
                 </Button>
               </Link>
-              <LanguageToggle />
+              <div className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
+                <LanguageToggle />
+              </div>
+              
               <Button 
                 className="bg-secondary hover:bg-secondary/90 text-primary font-bold shadow-lg hover:shadow-xl transition-all"
                 onClick={scrollToContact}
               >
-                Free Estimate
+                {t('hero.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -183,37 +188,37 @@ export default function Home() {
           <div className="container py-6 space-y-4">
             <Link href="/services" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Services
+                {t('nav.services')}
               </div>
             </Link>
             <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Gallery
+                {t('nav.gallery')}
               </div>
             </a>
             <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Blog
+                {t('nav.blog')}
               </div>
             </Link>
             <Link href="/videos" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Videos
+                {t('nav.videos')}
               </div>
             </Link>
             <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                FAQ
+                {t('nav.faq')}
               </div>
             </Link>
             <Link href="/team" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Our Team
+                {t('nav.team')}
               </div>
             </Link>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Contact
+                {t('nav.contact')}
               </div>
             </a>
             <div className="pt-4 border-t border-border">
@@ -224,7 +229,7 @@ export default function Home() {
                   scrollToContact();
                 }}
               >
-                Get Free Estimate
+                {t('hero.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -243,7 +248,7 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.4)" }}
         >
-          <source src="https://cdn.pixabay.com/video/2022/11/09/138099-769862134_large.mp4" type="video/mp4" />
+          <source src="https://prodependable.com/wp-content/uploads/2025/09/greySiteVid.mp4" type="video/mp4" />
           {/* Fallback background image */}
           <div 
             className="absolute inset-0 bg-cover bg-center"
@@ -252,7 +257,7 @@ export default function Home() {
         </video>
         
         {/* Solid overlay */}
-        <div className="absolute inset-0 bg-primary/70" />
+        <div className="absolute inset-0 bg-primary/10" />
         
         {/* Animated geometric shapes */}
         <div className="absolute top-20 right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse" />
@@ -261,18 +266,17 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-12 text-center flex flex-col items-center justify-center py-12">
           <Badge className="mb-20 mt-16 bg-secondary/90 backdrop-blur-sm text-primary px-6 py-3 text-base font-bold shadow-2xl animate-fade-in">
             <Award className="h-5 w-5 mr-2 inline" />
-            Super Service Award Winner 2024
+            {t('hero.award')}
           </Badge>
           
           <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in-up">
-            Crafting Excellence,<br />
             <span className="text-secondary">
-              Building Trust
+              {t('hero.tagline')}
             </span>
           </h2>
           
           <p className="text-2xl md:text-3xl text-white/95 mb-12 max-w-4xl mx-auto font-light animate-fade-in-up delay-200">
-            Transform your property with 30+ years of masterful craftsmanship and unwavering dedication
+            {t('hero.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
@@ -281,7 +285,7 @@ export default function Home() {
               className="bg-secondary hover:bg-secondary/90 text-primary text-xl px-10 py-8 font-bold shadow-2xl hover:shadow-secondary/50 transition-all transform hover:scale-105"
               onClick={scrollToContact}
             >
-              Get Your Free Estimate
+              {t('hero.cta')}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
             <Button 
@@ -291,7 +295,7 @@ export default function Home() {
               onClick={() => window.location.href = "tel:2016374345"}
             >
               <Phone className="mr-3 h-6 w-6" />
-              (201) 637-4345
+              (201) 637-4343
             </Button>
           </div>
 
@@ -305,14 +309,6 @@ export default function Home() {
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
                className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110">
               <Instagram className="h-5 w-5 text-white" />
-            </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-               className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110">
-              <Linkedin className="h-5 w-5 text-white" />
-            </a>
-            <a href="https://yelp.com" target="_blank" rel="noopener noreferrer"
-               className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110">
-              <Star className="h-5 w-5 text-white" />
             </a>
           </div>
         </div>
@@ -331,32 +327,20 @@ export default function Home() {
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">Licensed, Insured & Award-Winning</h2>
-            <p className="text-lg text-muted-foreground">Your Trust is Our Foundation</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">{t('credentials.title')}</h2>
+            <p className="text-lg text-muted-foreground">{t('credentials.subtitle')}</p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Angi Super Service Award */}
             <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-8 border-2 border-secondary shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
               <div className="flex flex-col items-center text-center">
                 <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 shadow-lg">
                   <Award className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Angi Super Service</h3>
-                <p className="text-3xl font-bold text-secondary mb-1">Award Winner</p>
-                <p className="text-lg text-muted-foreground">2024</p>
-              </div>
-            </div>
-
-            {/* BBB A+ Rating */}
-            <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 border-2 border-blue-600 shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
-              <div className="flex flex-col items-center text-center">
-                <div className="w-24 h-24 rounded-full bg-blue-600 flex items-center justify-center mb-4 shadow-lg">
-                  <Shield className="h-12 w-12 text-white" />
-                </div>
-                <h3 className="text-xl font-bold text-primary mb-2">BBB Accredited</h3>
-                <p className="text-5xl font-bold text-blue-600 mb-1">A+</p>
-                <p className="text-lg text-muted-foreground">Rating</p>
+                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.angi')}</h3>
+                <p className="text-3xl font-bold text-secondary mb-1">{t('credentials.award_winning')}</p>
+                <p className="text-lg text-muted-foreground">2025</p>
               </div>
             </div>
 
@@ -366,8 +350,8 @@ export default function Home() {
                 <div className="w-24 h-24 rounded-full bg-green-600 flex items-center justify-center mb-4 shadow-lg">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">General Liability</h3>
-                <p className="text-2xl font-bold text-green-600 mb-1">Fully Insured</p>
+                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.general')}</h3>
+                <p className="text-2xl font-bold text-green-600 mb-1">{t('credentials.fully_insured')}</p>
                 <p className="text-sm text-muted-foreground">Comprehensive Coverage</p>
               </div>
             </div>
@@ -378,7 +362,7 @@ export default function Home() {
                 <div className="w-24 h-24 rounded-full bg-purple-600 flex items-center justify-center mb-4 shadow-lg">
                   <Users className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">Workers Comp</h3>
+                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.workers')}</h3>
                 <p className="text-2xl font-bold text-purple-600 mb-1">Fully Insured</p>
                 <p className="text-sm text-muted-foreground">Employee Protection</p>
               </div>
@@ -389,7 +373,7 @@ export default function Home() {
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full shadow-xl">
               <CheckCircle2 className="h-6 w-6 text-secondary" />
-              <span className="font-bold text-lg">NJ Home Improvement License #13VH12345600</span>
+              <span className="font-bold text-lg">{t('credentials.button')}</span>
             </div>
           </div>
         </div>
@@ -405,25 +389,25 @@ export default function Home() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.years}+</div>
-              <p className="text-xl text-white/90">Years Experience</p>
+              <p className="text-xl text-white/90">{t('stats.experience')}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.projects}+</div>
-              <p className="text-xl text-white/90">Projects Completed</p>
+              <p className="text-xl text-white/90">{t('stats.projects')}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.clients}+</div>
-              <p className="text-xl text-white/90">Happy Clients</p>
+              <p className="text-xl text-white/90">{t('stats.satisfaction')}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
               <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.rating}</div>
-              <p className="text-xl text-white/90">Angi Rating</p>
+              <p className="text-xl text-white/90">{t('stats.warranty')}</p>
             </div>
           </div>
           
           {/* Review Platform Badges */}
           <div className="mt-16 pt-16 border-t border-white/20">
-            <p className="text-center text-xl text-white/90 mb-8 font-medium">Trusted & Verified On</p>
+            <p className="text-center text-xl text-white/90 mb-8 font-medium">{t('platform.title')}</p>
             <div className="flex flex-wrap items-center justify-center gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl px-8 py-6 border border-white/20 hover:bg-white/20 transition-all">
                 <div className="flex items-center gap-3">
@@ -438,7 +422,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Star className="h-8 w-8 text-secondary fill-secondary" />
                   <div>
-                    <p className="text-2xl font-bold text-white">4.8/5.0</p>
+                    <p className="text-2xl font-bold text-white">5.0</p>
                     <p className="text-sm text-white/80">Google Reviews</p>
                   </div>
                 </div>
@@ -471,11 +455,11 @@ export default function Home() {
         <div className="container mx-auto px-12">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary/10 text-secondary border-secondary px-6 py-2 text-base">
-              Why Choose Us
+              {t('features.badge')}
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">The Dependable Difference</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">{t('features.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Experience unmatched quality, reliability, and craftsmanship that sets us apart
+              {t('features.subtitle')}
             </p>
           </div>
 
@@ -521,8 +505,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Project Showcase Video Section */}
-      <section className="py-24 bg-gradient-to-b from-muted/30 to-white relative overflow-hidden">
+      {/* Project Showcase Video Section HIDDEN*/}
+      <section className="hidden py-24 bg-gradient-to-b from-muted/30 to-white relative overflow-hidden">
         <div className="container mx-auto px-12">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base font-bold">
@@ -735,7 +719,7 @@ export default function Home() {
           <Testimonials />
           
           {/* Video Testimonials */}
-          <div className="mt-24">
+          {/* <div className="mt-24">
             <div className="text-center mb-16">
               <Badge className="mb-6 bg-secondary/10 text-secondary border-secondary px-6 py-2 text-base">
                 <Star className="h-4 w-4 mr-2 inline fill-secondary" />
@@ -747,7 +731,7 @@ export default function Home() {
               </p>
             </div>
             <VideoTestimonials />
-          </div>
+          </div> */}
           
           {/* Review Widgets */}
           <div className="mt-24">
@@ -817,7 +801,7 @@ export default function Home() {
                   <Phone className="h-16 w-16 text-primary mx-auto mb-6" />
                   <h3 className="text-3xl font-bold text-primary mb-4">Call Us</h3>
                   <a href="tel:2016374345" className="text-2xl text-primary/80 hover:text-primary transition-colors font-bold block">
-                    (201) 637-4345
+                    (201) 637-4343
                   </a>
                   <p className="text-muted-foreground mt-4">Available Mon-Sat, 8AM-6PM</p>
                 </CardContent>
@@ -827,8 +811,8 @@ export default function Home() {
                 <CardContent className="p-10">
                   <Mail className="h-16 w-16 text-primary mx-auto mb-6" />
                   <h3 className="text-3xl font-bold text-primary mb-4">Email Us</h3>
-                  <a href="mailto:prodependable@gmail.com" className="text-xl text-primary/80 hover:text-primary transition-colors break-all">
-                    prodependable@gmail.com
+                  <a href="mailto:prodendable@gmail.com" className="text-xl text-primary/80 hover:text-primary transition-colors break-all">
+                    prodendable@gmail.com
                   </a>
                   <p className="text-muted-foreground mt-4">We respond within 24 hours</p>
                 </CardContent>
@@ -845,14 +829,7 @@ export default function Home() {
                  className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110">
                 <Instagram className="h-6 w-6 text-primary hover:text-white transition-colors" />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer"
-                 className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110">
-                <Linkedin className="h-6 w-6 text-primary hover:text-white transition-colors" />
-              </a>
-              <a href="https://yelp.com" target="_blank" rel="noopener noreferrer"
-                 className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110">
-                <Star className="h-6 w-6 text-primary hover:text-white transition-colors" />
-              </a>
+            
             </div>
           </div>
         </div>
@@ -868,11 +845,7 @@ export default function Home() {
       {/* Premium Footer */}
       <footer className="bg-primary text-white py-16">
         <div className="container mx-auto px-12">
-          {/* Newsletter Signup */}
-          <div className="mb-16">
-            <NewsletterSignup />
-          </div>
-
+          
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
@@ -915,11 +888,11 @@ export default function Home() {
               <div className="space-y-4 text-white/70">
                 <p className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-secondary" />
-                  (201) 637-4345
+                  (201) 637-4343
                 </p>
                 <p className="flex items-center gap-3">
                   <Mail className="h-5 w-5 text-secondary" />
-                  prodependable@gmail.com
+                  prodendable@gmail.com
                 </p>
                 <p className="text-sm">Mon-Sat: 8AM - 6PM</p>
               </div>
@@ -945,7 +918,7 @@ export default function Home() {
 
       {/* Floating Action Button */}
       <a
-        href="tel:2016374345"
+        href="tel:2016374343"
         className="fixed bottom-8 right-8 w-16 h-16 bg-secondary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform z-40 animate-pulse"
       >
         <Phone className="h-8 w-8 text-white" />

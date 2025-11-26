@@ -225,7 +225,7 @@ export default function Location() {
                     (201) 657-4345
                   </Button>
                 </a>
-                <a href="mailto:prodependable@gmail.com" className="flex-1">
+                <a href="mailto:prodendable@gmail.com" className="flex-1">
                   <Button variant="outline" className="w-full">
                     <Mail className="mr-2 h-4 w-4" />
                     Email Us

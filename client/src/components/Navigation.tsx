@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Search, Menu, X, ArrowRight } from "lucide-react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "wouter";
+import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Navigation() {

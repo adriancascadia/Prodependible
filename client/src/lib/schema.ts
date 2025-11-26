@@ -52,8 +52,8 @@ export const getLocalBusinessSchema = (): LocalBusinessSchema => ({
   ],
   "@id": window.location.origin,
   url: window.location.origin,
-  telephone: "+12016374345",
-  email: "prodependable@gmail.com",
+  telephone: "+12016374343",
+  email: "prodendable@gmail.com",
   priceRange: "$$",
   foundingDate: "2017-08",
   address: {

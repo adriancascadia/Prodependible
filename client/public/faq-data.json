@@ -86,7 +86,7 @@
         },
         {
           "id": 14,
-          "question": "Do you offer financing options?",
+          "question": "Do you offer ?",
           "answer": "Yes! We work with several financing partners to offer flexible payment plans for qualified homeowners. Options include 0% interest for 12 months, low-interest extended terms, and same-day approval. Ask about financing during your consultation."
         },
         {
@@ -104,7 +104,7 @@
         {
           "id": 16,
           "question": "Who will be working on my project?",
-          "answer": "Your project will be managed by one of our experienced project managers (Sergey or Boris) who will be your main point of contact. The actual work is performed by our skilled craftsmen who have years of experience. We do not use day laborers—all workers are trained professionals."
+          "answer": "Your project will be managed by one of our experienced project managers (Sergey) who will be your main point of contact. The actual work is performed by our skilled craftsmen who have years of experience. We do not use day laborers—all workers are trained professionals."
         },
         {
           "id": 17,
@@ -168,7 +168,7 @@
         {
           "id": 26,
           "question": "Do you offer warranties on your work?",
-          "answer": "Yes! We provide a comprehensive warranty on all workmanship. The specific terms vary by project type, but typically we offer a 1-year warranty on labor and pass through manufacturer warranties on materials (which can be 5-25 years depending on the product). We stand behind our work."
+          "answer": "Yes! We provide a comprehensive warranty on all workmanship. The specific terms vary by project type, but typically we offer a 2-year warranty on labor and pass through manufacturer warranties on materials (which can be 5-25 years depending on the product). We stand behind our work."
         },
         {
           "id": 27,

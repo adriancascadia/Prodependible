@@ -66,12 +66,7 @@ export default function ServiceAreaMap() {
 
   const serviceAreas = [
     "Bergen County",
-    "Passaic County",
-    "Hudson County",
-    "Essex County",
-    "Morris County",
-    "Rockland County, NY",
-    "And surrounding areas"
+    "Passaic County"
   ];
 
   return (
@@ -127,7 +122,7 @@ export default function ServiceAreaMap() {
                 className="inline-flex items-center gap-2 bg-secondary hover:bg-secondary/90 text-primary px-6 py-3 rounded-lg font-bold transition-all transform hover:scale-105"
               >
                 <MapPin className="h-5 w-5" />
-                (201) 637-4345
+                (201) 637-4343
               </a>
             </div>
           </Card>
@@ -136,7 +131,7 @@ export default function ServiceAreaMap() {
 
       <div className="text-center bg-muted/30 rounded-2xl p-8">
         <p className="text-lg text-muted-foreground">
-          <span className="font-bold text-primary">Service Radius:</span> Approximately 25 miles from Bergen County, NJ
+          <span className="font-bold text-primary">Service Radius:</span> Approximately 15 miles from Bergen County, NJ
         </p>
       </div>
     </div>

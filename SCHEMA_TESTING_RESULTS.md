@@ -17,7 +17,7 @@ This document provides comprehensive testing results and recommendations for all
   "@type": "LocalBusiness",
   "name": "Dependable Home Improvement",
   "telephone": "+12016374345",
-  "email": "prodependable@gmail.com",
+  "email": "prodendable@gmail.com",
   "priceRange": "$$",
   "foundingDate": "2017-08",
   "address": {

@@ -102,7 +102,6 @@ export default function Services() {
         "Kitchen remodeling",
         "Bathroom renovations",
         "Basement finishing",
-        "Room additions",
         "Whole-home updates",
         "Design consultation"
       ],

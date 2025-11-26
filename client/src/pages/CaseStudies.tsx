@@ -228,7 +228,7 @@ export default function CaseStudies() {
                   Call (201) 657-4345
                 </Button>
               </a>
-              <a href="mailto:prodependable@gmail.com">
+              <a href="mailto:prodendable@gmail.com">
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary">
                   <Mail className="mr-2 h-5 w-5" />
                   Email Us
