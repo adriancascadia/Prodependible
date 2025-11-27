@@ -5,12 +5,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Breadcrumb from "@/components/Breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
 import { 
   Wrench, Hammer, PaintBucket, Lightbulb, CheckCircle2, 
   ArrowRight, Phone, Star, DoorOpen 
 } from "lucide-react";
 
 export default function Services() {
+  const { t } = useLanguage();
   // Inject Service schemas for SEO
   useEffect(() => {
     const schemas = getServiceSchemas();
@@ -117,18 +119,18 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-muted/30">
-      <Breadcrumb items={[{ label: 'Services' }]} />
+      <Breadcrumb items={[{ label: t('nav.services') }]} />
       {/* Header */}
       <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
               <Star className="h-5 w-5 mr-2 inline fill-secondary" />
-              Premium Quality Services
+              {t('services.badge')}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Services</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('services.title')}</h1>
             <p className="text-xl text-white/90">
-              Comprehensive home improvement solutions delivered with expertise, integrity, and exceptional craftsmanship since 2017, backed by 30+ years of construction experience.
+              {t('services.subtitle')}
             </p>
           </div>
         </div>
@@ -217,10 +219,10 @@ export default function Services() {
       <section className="py-20 bg-gradient-to-br from-secondary via-accent to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-            Ready to Start Your Project?
+            {t('services.cta.title')}
           </h2>
           <p className="text-xl text-primary/80 mb-10 max-w-2xl mx-auto">
-            Get a free, no-obligation estimate and experience the Dependable difference
+            {t('services.cta.subtitle')}
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6">

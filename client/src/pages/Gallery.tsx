@@ -6,6 +6,7 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { Images, X } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface GalleryItem {
   id: number;
@@ -18,51 +19,52 @@ interface GalleryItem {
 const galleryItems: GalleryItem[] = [
   {
     id: 1,
-    title: "Modern Kitchen Renovation",
-    category: "Kitchen",
-    image: "/gallery-kitchen.png",
-    description: "Complete kitchen transformation with custom cabinets, quartz countertops, and modern appliances."
+    title: "Deck Enhancement",
+    category: "Deck",
+    image: "/gallery/gallery-deck.jpg",
+    description: "Complete deck transformation with custom cabinets, quartz countertops, and modern appliances."
   },
   {
     id: 2,
-    title: "Luxury Bathroom Remodel",
-    category: "Bathroom",
-    image: "/gallery-bathroom.jpg",
-    description: "Spa-like bathroom featuring custom tile work, frameless shower, and double vanity."
+    title: "Full Deck Reconstruction",
+    category: "Deck",
+    image: "/gallery/gallery-deckfull.jpg",
+    description: "Complete deck reconstruction with custom cabinets, quartz countertops, and modern appliances."
   },
   {
     id: 3,
-    title: "Exterior Home Painting",
-    category: "Painting",
-    image: "/gallery-exterior.jpg",
-    description: "Professional exterior painting with premium weather-resistant paint for lasting beauty."
+    title: "Enclosure Installation",
+    category: "Enclosure",
+    image: "/gallery/gallery-enclosure.jpg",
+    description: "Complete enclosure installation with custom cabinets, quartz countertops, and modern appliances."
   },
   {
     id: 4,
-    title: "Hardwood Floor Installation",
-    category: "Flooring",
-    image: "/gallery-floor.jpg",
-    description: "Beautiful hardwood flooring installation with expert craftsmanship and perfect finish."
+    title: "Stair Replacement + Structural Repair",
+    category: "Stairs",
+    image: "/gallery/gallery-stairs.jpg",
+    description: "Complete stair replacement and structural repair with custom cabinets, quartz countertops, and modern appliances."
   },
   {
     id: 5,
-    title: "Interior Painting Project",
-    category: "Painting",
-    image: "/gallery-painting.jpg",
-    description: "Fresh interior paint with careful prep work and clean, professional results."
+    title: "Patio Door Installation",
+    category: "Patio",
+    image: "/gallery/gallery-patio.jpg",
+    description: "Complete patio door installation with custom cabinets, quartz countertops, and modern appliances."
   },
   {
     id: 6,
-    title: "Custom Furniture Assembly",
-    category: "Carpentry",
-    image: "/gallery-furniture.png",
-    description: "Expert furniture assembly and custom woodwork for functional living spaces."
+    title: "Custom Entry Deck",
+    category: "Deck",
+    image: "/gallery/gallery-entrydeck.jpg",
+    description: "Complete entry deck installation with custom cabinets, quartz countertops, and modern appliances."
   }
 ];
 
-const categories = ["All", "Kitchen", "Bathroom", "Painting", "Flooring", "Carpentry"];
+const categories = ["All", "Deck", "Enclosure", "Stairs", "Patio", "Carpentry"];
 
 export default function Gallery() {
+  const { t } = useLanguage();
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [selectedImage, setSelectedImage] = useState<GalleryItem | null>(null);
   const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
@@ -84,7 +86,7 @@ export default function Gallery() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream to-white">
-      <Breadcrumb items={[{ label: 'Project Gallery' }]} />
+      <Breadcrumb items={[{ label: t('nav.gallery') }]} />
       
       {/* Header */}
       <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20">
@@ -92,11 +94,11 @@ export default function Gallery() {
           <div className="max-w-3xl">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
               <Images className="h-5 w-5 mr-2 inline" />
-              Our Work
+              {t('gallery.button')}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Project Gallery</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('gallery.title')}</h1>
             <p className="text-xl text-white/90">
-              Explore our portfolio of completed projects showcasing quality craftsmanship and attention to detail.
+              {t('gallery.subtitle')}
             </p>
           </div>
         </div>
@@ -199,12 +201,12 @@ export default function Gallery() {
                 </Button>
                 {isZoomed && (
                   <div className="absolute top-4 left-4 bg-black/70 text-white px-3 py-1 rounded text-sm z-10">
-                    Click image to zoom out
+                    {t('gallery.zoomOut')}
                   </div>
                 )}
                 {!isZoomed && (
                   <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/70 text-white px-3 py-1 rounded text-sm z-10">
-                    Click image to zoom in
+                    {t('gallery.zoomIn')}
                   </div>
                 )}
               </div>
@@ -227,16 +229,16 @@ export default function Gallery() {
       {/* CTA Section */}
       <section className="py-16 bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Start Your Project?</h2>
+          <h2 className="text-4xl font-bold mb-6">{t('gallery.cta.title')}</h2>
           <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            Let's transform your home with the same quality craftsmanship showcased in our gallery.
+            {t('gallery.cta.subtitle')}
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button size="lg" variant="secondary" className="px-8">
-              Get Free Estimate
+              {t('hero.cta')}
             </Button>
             <Button size="lg" variant="outline" className="px-8 border-2 border-white text-white hover:bg-white hover:text-primary">
-              Call (201) 637-4345
+              {t('hero.call')}
             </Button>
           </div>
         </div>

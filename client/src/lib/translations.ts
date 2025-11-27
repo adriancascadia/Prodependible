@@ -57,23 +57,106 @@ export const translations = {
     },
     // Services
     services: {
-      title: "Premium Services",
-      subtitle: "Comprehensive home improvement solutions delivered with precision and care",
+      badge: "Premium Quality Services",
+      title: "Our Services",
+      subtitle: "Comprehensive home improvement solutions delivered with expertise, integrity, and exceptional craftsmanship since 2017, backed by 30+ years of construction experience.",
       deck: {
         title: "Deck Building & Refinishing",
-        desc: "Custom decks designed for beauty and durability"
+        desc: "Custom decks designed for beauty and durability",
+        category: "Deck Enhancement"
       },
       doors: {
         title: "Door Installation",
-        desc: "Professional installation of all door types"
+        desc: "Professional installation of all door types",
+        category: "Door Installation"
       },
       basement: {
         title: "Basement Finishing",
-        desc: "Transform unused space into functional living areas"
+        desc: "Transform unused space into functional living areas",
+        category: "Basement Finishing"
       },
       carpentry: {
         title: "Custom Carpentry",
-        desc: "Precision woodwork tailored to your vision"
+        desc: "Precision woodwork tailored to your vision",
+        category: "Custom Carpentry"
+      },
+      cta: {
+        title: "Ready to Start Your Project?",
+        subtitle: "Get a free, no-obligation estimate and experience the Dependable difference"
+      }
+    },
+    // Gallery
+    gallery: {
+      title: "Project Gallery",
+      subtitle: "Explore our completed projects and see the results for yourself",
+      button: "View All Projects",
+      deck: {
+        title: "Deck Building & Refinishing",
+        desc: "Custom decks designed for beauty and durability",
+        category: "Deck Enhancement"
+      },
+      completeDeck: {
+        title: "Complete Deck Reconstruction",
+        desc: "Custom decks designed for beauty and durability",
+        category: "Deck Building"
+      },
+      doors: {
+        title: "Door Installation",
+        desc: "Professional installation of all door types",
+        category: "Door Installation"
+      },
+      stairs: {
+        title: "Stair Installation",
+        desc: "Professional installation of all stair types",
+        category: "Stair Installation"
+      },
+      patioDoor: {
+        title: "Patio Door Installation",
+        desc: "Professional installation of all patio door types",
+        category: "Door Replacement"
+      },
+      cellarDoor: {
+        title: "Cellar Door Installation",
+        desc: "Professional installation of all cellar door types",
+        category: "Exterior Access"
+      },
+      basement: {
+        title: "Basement Finishing",
+        desc: "Transform unused space into functional living areas",
+        category: "Interior Renovation"
+      },
+      carpentry: {
+        title: "Custom Carpentry",
+        desc: "Precision woodwork tailored to your vision",
+        category: "Custom Carpentry"
+      },
+      zoomIn: "Click image to zoom in",
+      zoomOut: "Click image to zoom out",
+      cta: {
+        title: "Ready to Start Your Project?",
+        subtitle: "Let's transform your home with the same quality craftsmanship showcased in our gallery."
+      }
+    },
+    // Team
+    team: {
+      loading: "Loading team...",
+      badge: "Our Team",
+      title: "Meet the Craftsmen",
+      subtitle: "Our experienced team of skilled professionals brings decades of combined expertise to every project. We're not just contractors—we're craftsmen who take pride in transforming your vision into reality.",
+      whyChoose: {
+        title: "Why Choose Our Team?",
+        experienced: {
+          title: "Experienced Professionals",
+          desc: "Every team member brings years of hands-on experience and proven expertise."
+        },
+        licensed: {
+          title: "NJ Licensed & Insured",
+          desc: "NJ Home Improvement License with comprehensive general liability and workers' compensation insurance."
+        },
+        quality: {
+          title: "Quality Focused",
+          desc: "We take pride in every detail and stand behind our work with solid warranties."
+        }
       }
     },
     // Contact
@@ -173,6 +256,12 @@ export const translations = {
       carpentry: {
         title: "Столярные работы",
         desc: "Точная деревообработка по вашему видению"
+      },
+      zoomIn: "Нажмите для увеличения",
+      zoomOut: "Нажмите для уменьшения",
+      cta: {
+        title: "Готовы начать проект?",
+        subtitle: "Давайте преобразим ваш дом с тем же качеством мастерства, продемонстрированным в нашей галерее."
       }
     },
     // Contact
@@ -199,7 +288,7 @@ export const translations = {
       rights: "Все права защищены."
     }
   },
-  es: {
+    es: {
     // header
     header: {
       title: "Dependable Home Improvement",
@@ -260,6 +349,12 @@ export const translations = {
       carpentry: {
         title: "Carpintería Personalizada",
         desc: "Trabajo en madera de precisión adaptado a su visión"
+      },
+      zoomIn: "Haga clic para acercar",
+      zoomOut: "Haga clic para alejar",
+      cta: {
+        title: "¿Listo para comenzar su proyecto?",
+        subtitle: "Transformemos su hogar con la misma calidad artesanal mostrada en nuestra galería."
       }
     },
     // Contact

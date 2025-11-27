@@ -596,11 +596,11 @@ export default function Home() {
           <div className="text-center mb-20">
                 <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base font-bold">
               <ImageIcon className="h-5 w-5 mr-2 inline" />
-              Our Transformations
+              {t('gallery.button')}
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Project Gallery</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">{t('gallery.title')}</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              See the remarkable transformations we've created. Compare before and after results side-by-side.
+              {t('gallery.subtitle')}
             </p>
           </div>
 
@@ -608,32 +608,32 @@ export default function Home() {
             <ProjectCard
               beforeImage="/gallery/deck-refinish-before.jpg"
               afterImage="/gallery/deck-refinish-after.jpg"
-              title="Deck Refinishing & Restoration"
-              category="Deck Enhancement"
+              title={t('gallery.deck.title')}
+              category={t('gallery.deck.category')}
             />
             <ProjectCard
               beforeImage="/gallery/deck-remodel-before.jpg"
               afterImage="/gallery/deck-remodel-after.jpg"
-              title="Complete Deck Reconstruction"
-              category="Deck Building"
+              title={t('gallery.completeDeck.title')}
+              category={t('gallery.completeDeck.category')}
             />
             <ProjectCard
               beforeImage="/gallery/stair-before.png"
               afterImage="/gallery/stair-after.png"
-              title="Exterior Stair Replacement"
-              category="Structural Repair"
+              title={t('gallery.stairs.title')}
+              category={t('gallery.stairs.category')}
             />
             <ProjectCard
               beforeImage="/gallery/patio-door-before.jpg"
               afterImage="/gallery/patio-door-after.jpg"
-              title="Patio Door Installation"
-              category="Door Replacement"
+              title={t('gallery.patioDoor.title')}
+              category={t('gallery.patioDoor.category')}
             />
             <ProjectCard
               beforeImage="/gallery/cellar-door-before.jpg"
               afterImage="/gallery/cellar-door-after.png"
-              title="Cellar Door Installation"
-              category="Exterior Access"
+              title={t('gallery.cellarDoor.title')}
+              category={t('gallery.cellarDoor.category')}
             />
             <ProjectCard
               beforeImage="/gallery/basement-before.jpg"

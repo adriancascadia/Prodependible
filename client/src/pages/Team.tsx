@@ -3,6 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Award, Wrench } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface TeamMember {
   name: string;
@@ -14,6 +15,7 @@ interface TeamMember {
 }
 
 export default function Team() {
+  const { t } = useLanguage();
   const [team, setTeam] = useState<TeamMember[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -33,14 +35,14 @@ export default function Team() {
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <p className="text-muted-foreground">Loading team...</p>
+        <p className="text-muted-foreground">{t('team.loading')}</p>
       </div>
     );
   }
 
   return (
     <>
-      <Breadcrumb items={[{ label: 'Team' }]} />
+      <Breadcrumb items={[{ label: t('nav.team') }]} />
       {/* Hero Section */}
       <section className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
@@ -51,12 +53,11 @@ export default function Team() {
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
               <Users className="h-5 w-5 mr-2 inline" />
-              Our Team
+              {t('team.badge')}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Meet the Craftsmen</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t('team.title')}</h1>
             <p className="text-xl text-white/90 leading-relaxed">
-              Our experienced team of skilled professionals brings decades of combined expertise to every project. 
-              We're not just contractors—we're craftsmen who take pride in transforming your vision into reality.
+              {t('team.subtitle')}
             </p>
           </div>
         </div>
@@ -110,28 +111,28 @@ export default function Team() {
       <section className="py-24 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">Why Choose Our Team?</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-primary mb-8">{t('team.whyChoose.title')}</h2>
             <div className="grid md:grid-cols-3 gap-8 mt-12">
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
                   <Users className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Experienced Professionals</h3>
-                <p className="text-muted-foreground">Every team member brings years of hands-on experience and proven expertise.</p>
+                <h3 className="text-xl font-bold text-primary mb-3">{t('team.whyChoose.experienced.title')}</h3>
+                <p className="text-muted-foreground">{t('team.whyChoose.experienced.desc')}</p>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
                   <Award className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">NJ Licensed & Insured</h3>
-                <p className="text-muted-foreground">NJ Home Improvement License with comprehensive general liability and workers' compensation insurance.</p>
+                <h3 className="text-xl font-bold text-primary mb-3">{t('team.whyChoose.licensed.title')}</h3>
+                <p className="text-muted-foreground">{t('team.whyChoose.licensed.desc')}</p>
               </div>
               <div className="bg-white rounded-xl p-8 shadow-lg">
                 <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary mb-6">
                   <Wrench className="h-8 w-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-3">Quality Focused</h3>
-                <p className="text-muted-foreground">We take pride in every detail and stand behind our work with solid warranties.</p>
+                <h3 className="text-xl font-bold text-primary mb-3">{t('team.whyChoose.quality.title')}</h3>
+                <p className="text-muted-foreground">{t('team.whyChoose.quality.desc')}</p>
               </div>
             </div>
           </div>
