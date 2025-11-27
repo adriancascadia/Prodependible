@@ -4,6 +4,7 @@ import { getServiceSchemas, injectSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import Breadcrumb from "@/components/Breadcrumb";
 import { 
   Wrench, Hammer, PaintBucket, Lightbulb, CheckCircle2, 
   ArrowRight, Phone, Star, DoorOpen 
@@ -116,6 +117,7 @@ export default function Services() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-muted/30">
+      <Breadcrumb items={[{ label: 'Services' }]} />
       {/* Header */}
       <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20">
         <div className="container mx-auto px-6">

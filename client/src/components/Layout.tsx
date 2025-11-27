@@ -23,7 +23,7 @@ export default function Layout({ children }: LayoutProps) {
       <WhatsAppButton />
       <PromoBanner />
       <Navigation />
-      <div className="pt-32">
+      <div className="">
         {children}
       </div>
     </div>

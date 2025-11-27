@@ -38,7 +38,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between gap-8">
             <Link href="/">
               <div className="flex items-center gap-4 cursor-pointer">
-                <img src="/logo-concept3.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
+                <img src="/logo.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
                 <div className="max-w-[180px]">
                   <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
                     Dependable Home<br />Improvement

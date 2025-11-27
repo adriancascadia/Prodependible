@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Users, Award, Wrench } from "lucide-react";
+import Breadcrumb from "@/components/Breadcrumb";
 
 interface TeamMember {
   name: string;
@@ -39,6 +40,7 @@ export default function Team() {
 
   return (
     <>
+      <Breadcrumb items={[{ label: 'Team' }]} />
       {/* Hero Section */}
       <section className="py-24 bg-primary text-white relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
