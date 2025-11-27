@@ -849,7 +849,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <img src="/logo-concept3.png" alt="Dependable Home Improvement" className="h-16 w-16" />
+                <img src="/logo.png" alt="Dependable Home Improvement" className="h-16 w-16 bg-white rounded-full" />
                 <div>
                   <h3 className="text-xl font-bold">Dependable</h3>
                   <p className="text-secondary text-sm">Home Improvement</p>
