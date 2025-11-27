@@ -104,7 +104,7 @@ export default function Home() {
         <div className="w-full px-4 py-5">
           <div className="flex items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <img src="/logo-concept3.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
+              <img src="/logo.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
               <div className="max-w-[180px]">
                 <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
                   {t('header.title')}
@@ -257,7 +257,7 @@ export default function Home() {
         </video>
         
         {/* Solid overlay */}
-        <div className="absolute inset-0 bg-primary/10" />
+        <div className="absolute inset-0 bg-primary/1" />
         
         {/* Animated geometric shapes */}
         <div className="absolute top-20 right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse" />
