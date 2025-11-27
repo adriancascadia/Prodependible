@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight, Calendar, Clock, BookOpen, Loader2 } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface BlogPost {
   id: number;
@@ -19,10 +20,18 @@ interface BlogPost {
 }
 
 export default function Blog() {
+  const { t } = useLanguage();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
-  const [selectedCategory, setSelectedCategory] = useState<string>("All");
-  const categories = ["All", "Maintenance Tips", "Design Inspiration", "Homeowner Guide", "Home Value", "Seasonal Tips"];
+  const [selectedCategory, setSelectedCategory] = useState<string>(t("blog.allCategories"));
+  const categories = [
+    t("blog.allCategories"),
+    t("blog.maintenanceTips"),
+    t("blog.designInspiration"),
+    t("blog.homeownerGuide"),
+    t("blog.homeValue"),
+    t("blog.seasonalTips")
+  ];
 
   useEffect(() => {
     fetch('/blog-posts.json')
@@ -37,10 +46,6 @@ export default function Blog() {
       });
   }, []);
 
-  const filteredPosts = selectedCategory === "All" 
-    ? posts 
-    : posts.filter(post => post.category === selectedCategory);
-
   if (loading) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -49,20 +54,35 @@ export default function Blog() {
     );
   }
 
+  const filteredCategory = selectedCategory === t("blog.allCategories") ? "All" : selectedCategory;
+  const filteredPosts = filteredCategory === "All" 
+    ? posts 
+    : posts.filter(post => {
+        // Map translated category names back to English for filtering
+        const categoryMap: Record<string, string> = {
+          [t("blog.maintenanceTips")]: "Maintenance Tips",
+          [t("blog.designInspiration")]: "Design Inspiration",
+          [t("blog.homeownerGuide")]: "Homeowner Guide",
+          [t("blog.homeValue")]: "Home Value",
+          [t("blog.seasonalTips")]: "Seasonal Tips"
+        };
+        return post.category === (categoryMap[selectedCategory] || selectedCategory);
+      });
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-muted/30">
-      <Breadcrumb items={[{ label: 'Blog' }]} />
+      <Breadcrumb items={[{ label: t("blog.title") }]} />
       {/* Header */}
       <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
               <BookOpen className="h-5 w-5 mr-2 inline" />
-              Home Improvement Insights
+              {t("blog.badge")}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Our Blog</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t("blog.title")}</h1>
             <p className="text-xl text-white/90">
-              Expert tips, design inspiration, and practical guides to help you make the most of your home improvement projects.
+              {t("blog.subtitle")}
             </p>
           </div>
         </div>
@@ -93,7 +113,7 @@ export default function Blog() {
         <div className="container mx-auto px-6">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-xl text-muted-foreground">No posts found in this category.</p>
+              <p className="text-xl text-muted-foreground">{t("blog.noPosts")}</p>
             </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -136,7 +156,7 @@ export default function Blog() {
                       </div>
                       
                       <div className="flex items-center text-secondary font-semibold group-hover:gap-3 transition-all">
-                        Read More
+                        {t("blog.readMore")}
                         <ArrowRight className="h-5 w-5 ml-2 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </CardContent>
@@ -152,14 +172,14 @@ export default function Blog() {
       <section className="py-20 bg-gradient-to-br from-secondary via-accent to-secondary">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl font-bold text-primary mb-6">
-            Ready to Start Your Project?
+            {t("blog.readyToStart")}
           </h2>
           <p className="text-xl text-primary/80 mb-8 max-w-2xl mx-auto">
-            Get expert advice and a free estimate for your home improvement needs
+            {t("blog.readyText")}
           </p>
           <Link href="/#contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6">
-              Get Free Estimate
+              {t("blog.getFreeEstimate")}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
           </Link>

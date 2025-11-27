@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Calendar, Clock, Share2, Phone } from "lucide-react";
 import { toast } from "sonner";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface BlogPost {
   id: number;
@@ -21,6 +22,7 @@ interface BlogPost {
 }
 
 export default function BlogPost() {
+  const { t } = useLanguage();
   const [, params] = useRoute("/blog/:slug");
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
@@ -56,22 +58,22 @@ export default function BlogPost() {
       }).catch(() => {});
     } else {
       navigator.clipboard.writeText(window.location.href);
-      toast.success("Link copied to clipboard!");
+      toast.success(t("blog.linkCopied"));
     }
   };
 
   if (loading) {
-    return <div className="min-h-screen flex items-center justify-center">Loading...</div>;
+    return <div className="min-h-screen flex items-center justify-center">{t("blog.loading")}</div>;
   }
 
   if (!post) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center">
-        <h1 className="text-4xl font-bold text-primary mb-4">Post Not Found</h1>
+        <h1 className="text-4xl font-bold text-primary mb-4">{t("blog.postNotFound")}</h1>
         <Link href="/blog">
           <Button>
             <ArrowLeft className="mr-2 h-5 w-5" />
-            Back to Blog
+            {t("blog.backToBlog")}
           </Button>
         </Link>
       </div>
@@ -81,7 +83,7 @@ export default function BlogPost() {
   return (
     <div className="min-h-screen bg-white">
       <Breadcrumb items={[
-        { label: 'Blog', href: '/blog' },
+        { label: t("blog.title"), href: '/blog' },
         { label: post.title }
       ]} />
       {/* Hero Image */}
@@ -98,7 +100,7 @@ export default function BlogPost() {
             <Link href="/blog">
               <Button variant="outline" className="mb-6 bg-white/10 backdrop-blur-sm border-white text-white hover:bg-white/20">
                 <ArrowLeft className="mr-2 h-5 w-5" />
-                Back to Blog
+                {t("blog.backToBlog")}
               </Button>
             </Link>
             
@@ -123,7 +125,7 @@ export default function BlogPost() {
                 <Clock className="h-5 w-5" />
                 {post.readTime}
               </div>
-              <div>By {post.author}</div>
+              <div>{t("blog.by")} {post.author}</div>
             </div>
           </div>
         </div>
@@ -138,7 +140,7 @@ export default function BlogPost() {
             </p>
             <Button variant="outline" onClick={handleShare} className="flex-shrink-0 ml-4">
               <Share2 className="h-5 w-5 mr-2" />
-              Share
+              {t("blog.share")}
             </Button>
           </div>
 
@@ -173,10 +175,10 @@ export default function BlogPost() {
             <div className="flex flex-col md:flex-row items-center justify-between gap-6">
               <div>
                 <h3 className="text-2xl font-bold text-primary mb-2">
-                  Need Help With Your Project?
+                  {t("blog.needHelp")}
                 </h3>
                 <p className="text-muted-foreground">
-                  Our experienced team is ready to bring your vision to life
+                  {t("blog.helpText")}
                 </p>
               </div>
               <a href="tel:2016374345">
@@ -194,14 +196,14 @@ export default function BlogPost() {
       <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-primary mb-6">
-            Ready to Get Started?
+            {t("blog.readyToGetStarted")}
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Request a free estimate and see how we can transform your space
+            {t("blog.requestEstimate")}
           </p>
           <Link href="/#contact">
             <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6">
-              Get Free Estimate
+              {t("blog.getFreeEstimate")}
             </Button>
           </Link>
         </div>

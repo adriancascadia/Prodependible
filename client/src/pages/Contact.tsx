@@ -7,8 +7,11 @@ import { Badge } from "@/components/ui/badge";
 import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
 import Breadcrumb from "@/components/Breadcrumb";
+import { useLanguage } from "@/contexts/LanguageContext";
+
 
 export default function Contact() {
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -25,7 +28,7 @@ export default function Contact() {
     // Simulate form submission
     await new Promise(resolve => setTimeout(resolve, 1000));
 
-    toast.success("Thank you! We'll contact you within 24 hours.");
+    toast.success(t("contact.successMessage"));
     setFormData({
       name: "",
       email: "",
@@ -45,7 +48,7 @@ export default function Contact() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-cream to-white">
-      <Breadcrumb items={[{ label: 'Contact Us' }]} />
+      <Breadcrumb items={[{ label: t("contact.title") }]} />
       
       {/* Header */}
       <section className="bg-gradient-to-br from-primary via-primary/95 to-primary/90 text-white py-20">
@@ -53,11 +56,11 @@ export default function Contact() {
           <div className="max-w-3xl">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
               <Phone className="h-5 w-5 mr-2 inline" />
-              Get In Touch
+              {t("contact.badge")}
             </Badge>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">Contact Us</h1>
+            <h1 className="text-5xl md:text-6xl font-bold mb-6">{t("contact.title")}</h1>
             <p className="text-xl text-white/90">
-              Ready to start your project? Get a free estimate and experience the Dependable difference.
+              {t("contact.subtitle")}
             </p>
           </div>
         </div>
@@ -71,12 +74,12 @@ export default function Contact() {
             <div className="lg:col-span-2">
               <Card className="border-2 border-border">
                 <CardContent className="p-8">
-                  <h2 className="text-3xl font-bold text-primary mb-6">Request a Free Estimate</h2>
+                  <h2 className="text-3xl font-bold text-primary mb-6">{t("contact.formTitle")}</h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="name" className="block text-sm font-semibold text-foreground mb-2">
-                          Full Name *
+                          {t("contact.name")} *
                         </label>
                         <Input
                           id="name"
@@ -91,7 +94,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <label htmlFor="email" className="block text-sm font-semibold text-foreground mb-2">
-                          Email Address *
+                          {t("contact.email")} *
                         </label>
                         <Input
                           id="email"
@@ -109,7 +112,7 @@ export default function Contact() {
                     <div className="grid md:grid-cols-2 gap-6">
                       <div>
                         <label htmlFor="phone" className="block text-sm font-semibold text-foreground mb-2">
-                          Phone Number *
+                          {t("contact.phone")} *
                         </label>
                         <Input
                           id="phone"
@@ -124,7 +127,7 @@ export default function Contact() {
                       </div>
                       <div>
                         <label htmlFor="service" className="block text-sm font-semibold text-foreground mb-2">
-                          Service Needed *
+                          {t("contact.service")} *
                         </label>
                         <select
                           id="service"
@@ -134,20 +137,20 @@ export default function Contact() {
                           onChange={handleChange}
                           className="w-full border-2 border-input bg-background px-3 py-2 rounded-md text-sm"
                         >
-                          <option value="">Select a service...</option>
-                          <option value="andersen-windows">Andersen Doors & Windows</option>
-                          <option value="handyman">Handyman Services</option>
-                          <option value="carpentry">Carpentry & Woodwork</option>
-                          <option value="painting">Painting Services</option>
-                          <option value="renovation">Full Renovations</option>
-                          <option value="other">Other</option>
+                          <option value="">{t("contact.selectService")}</option>
+                          <option value="andersen-windows">{t("contact.andersenDoors")}</option>
+                          <option value="handyman">{t("contact.handyman")}</option>
+                          <option value="carpentry">{t("contact.carpentry")}</option>
+                          <option value="painting">{t("contact.painting")}</option>
+                          <option value="renovation">{t("contact.renovation")}</option>
+                          <option value="other">{t("contact.other")}</option>
                         </select>
                       </div>
                     </div>
 
                     <div>
                       <label htmlFor="message" className="block text-sm font-semibold text-foreground mb-2">
-                        Project Details *
+                        {t("contact.projectDetails")} *
                       </label>
                       <Textarea
                         id="message"
@@ -155,7 +158,7 @@ export default function Contact() {
                         required
                         value={formData.message}
                         onChange={handleChange}
-                        placeholder="Tell us about your project..."
+                        placeholder={t("contact.projectPlaceholder")}
                         rows={6}
                         className="border-2"
                       />
@@ -167,11 +170,11 @@ export default function Contact() {
                       className="w-full md:w-auto px-8 py-6 text-lg"
                     >
                       {isSubmitting ? (
-                        <>Sending...</>
+                        <>{t("contact.sending")}</>
                       ) : (
                         <>
                           <Send className="mr-2 h-5 w-5" />
-                          Send Message
+                          {t("contact.submit")}
                         </>
                       )}
                     </Button>
@@ -184,12 +187,12 @@ export default function Contact() {
             <div className="space-y-6">
               <Card className="border-2 border-border">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-4">Contact Information</h3>
+                  <h3 className="text-xl font-bold text-primary mb-4">{t("contact.contactInfo")}</h3>
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
                       <Phone className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-foreground">Phone</p>
+                        <p className="font-semibold text-foreground">{t("contact.phoneLabel")}</p>
                         <a href="tel:+12016374345" className="text-primary hover:text-secondary transition-colors">
                           (201) 637-4345
                         </a>
@@ -198,7 +201,7 @@ export default function Contact() {
                     <div className="flex items-start gap-3">
                       <Mail className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-foreground">Email</p>
+                        <p className="font-semibold text-foreground">{t("contact.emailLabel")}</p>
                         <a href="mailto:info@prodependable.com" className="text-primary hover:text-secondary transition-colors">
                           info@prodependable.com
                         </a>
@@ -207,17 +210,17 @@ export default function Contact() {
                     <div className="flex items-start gap-3">
                       <MapPin className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-foreground">Service Area</p>
-                        <p className="text-foreground/80">Bergen County, NJ & Surrounding Areas</p>
+                        <p className="font-semibold text-foreground">{t("contact.serviceArea")}</p>
+                        <p className="text-foreground/80">{t("contact.serviceAreaText")}</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <Clock className="h-5 w-5 text-secondary mt-1 flex-shrink-0" />
                       <div>
-                        <p className="font-semibold text-foreground">Business Hours</p>
-                        <p className="text-foreground/80">Mon-Fri: 7:00 AM - 6:00 PM</p>
-                        <p className="text-foreground/80">Sat: 8:00 AM - 4:00 PM</p>
-                        <p className="text-foreground/80">Sun: Closed</p>
+                        <p className="font-semibold text-foreground">{t("contact.businessHours")}</p>
+                        <p className="text-foreground/80">{t("contact.monFri")}</p>
+                        <p className="text-foreground/80">{t("contact.sat")}</p>
+                        <p className="text-foreground/80">{t("contact.sun")}</p>
                       </div>
                     </div>
                   </div>
@@ -226,24 +229,24 @@ export default function Contact() {
 
               <Card className="border-2 border-secondary bg-secondary/10">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">Emergency Services</h3>
+                  <h3 className="text-xl font-bold text-primary mb-3">{t("contact.emergency")}</h3>
                   <p className="text-foreground/90 mb-4">
-                    Need urgent repairs? We offer emergency services for critical issues.
+                    {t("contact.emergencyText")}
                   </p>
                   <Button variant="outline" className="w-full border-2 border-secondary text-secondary hover:bg-secondary hover:text-white">
                     <Phone className="mr-2 h-4 w-4" />
-                    Call for Emergency
+                    {t("contact.callEmergency")}
                   </Button>
                 </CardContent>
               </Card>
 
               <Card className="border-2 border-border">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-primary mb-3">Licensed & Insured</h3>
+                  <h3 className="text-xl font-bold text-primary mb-3">{t("contact.licensed")}</h3>
                   <div className="space-y-2 text-sm text-foreground/90">
-                    <p>✓ NJ Home Improvement License</p>
-                    <p>✓ General Liability Insurance</p>
-                    <p>✓ Workers' Compensation Insurance</p>
+                    <p>✓ {t("contact.njLicense")}</p>
+                    <p>✓ {t("contact.generalLiability")}</p>
+                    <p>✓ {t("contact.workersComp")}</p>
                   </div>
                 </CardContent>
               </Card>

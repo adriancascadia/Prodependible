@@ -23,96 +23,96 @@ export default function Services() {
   const services = [
     {
       icon: DoorOpen,
-      title: "Andersen Doors & Windows",
-      description: "Authorized installer of premium Andersen doors and windows. We partner with WindowRama Paramus to bring you the finest quality products and expert installation.",
-      features: [
-        "Andersen window installation",
-        "Andersen door installation & repair",
-        "Energy-efficient replacements",
-        "Custom sizing and configurations",
-        "Professional weatherproofing",
-        "Warranty-backed installations"
+      titleKey: "services.andersen.title",
+      descriptionKey: "services.andersen.description",
+      featuresKeys: [
+        "services.andersen.features.windowInstall",
+        "services.andersen.features.doorInstall",
+        "services.andersen.features.energyEfficient",
+        "services.andersen.features.customSizing",
+        "services.andersen.features.weatherproofing",
+        "services.andersen.features.warranty"
       ],
-      benefits: [
-        "WindowRama Paramus partnership",
-        "Factory-trained installers",
-        "Premium Andersen products",
-        "Energy savings guaranteed"
+      benefitsKeys: [
+        "services.andersen.benefits.partnership",
+        "services.andersen.benefits.trained",
+        "services.andersen.benefits.premium",
+        "services.andersen.benefits.energySavings"
       ]
     },
     {
       icon: Wrench,
-      title: "Handyman Services",
-      description: "From minor repairs to small projects, our skilled handymen handle it all with precision and care.",
-      features: [
-        "Fixture installation and repair",
-        "Door and window adjustments",
-        "Drywall patching and repair",
-        "Shelf and cabinet installation",
-        "General maintenance and repairs",
-        "Furniture assembly"
+      titleKey: "services.handyman.title",
+      descriptionKey: "services.handyman.description",
+      featuresKeys: [
+        "services.handyman.features.fixtures",
+        "services.handyman.features.doorWindow",
+        "services.handyman.features.drywall",
+        "services.handyman.features.shelfCabinet",
+        "services.handyman.features.maintenance",
+        "services.handyman.features.furniture"
       ],
-      benefits: [
-        "Quick response times",
-        "Honest, upfront pricing",
-        "No job too small",
-        "Experienced professionals"
+      benefitsKeys: [
+        "services.handyman.benefits.quickResponse",
+        "services.handyman.benefits.honestPricing",
+        "services.handyman.benefits.noJobSmall",
+        "services.handyman.benefits.experienced"
       ]
     },
     {
       icon: Hammer,
-      title: "Carpentry & Woodwork",
-      description: "Expert carpentry services for custom projects, repairs, and renovations with meticulous attention to detail.",
-      features: [
-        "Custom cabinetry and built-ins",
-        "Deck construction and repair",
-        "Trim and molding installation",
-        "Door and window installation",
-        "Furniture restoration",
-        "Structural repairs"
+      titleKey: "services.carpentry.title",
+      descriptionKey: "services.carpentry.description",
+      featuresKeys: [
+        "services.carpentry.features.customCabinetry",
+        "services.carpentry.features.deckConstruction",
+        "services.carpentry.features.trimMolding",
+        "services.carpentry.features.doorWindow",
+        "services.carpentry.features.furnitureRestoration",
+        "services.carpentry.features.structuralRepairs"
       ],
-      benefits: [
-        "30+ years of experience",
-        "Custom design consultation",
-        "Quality craftsmanship",
-        "Durable, long-lasting results"
+      benefitsKeys: [
+        "services.carpentry.benefits.experience",
+        "services.carpentry.benefits.customDesign",
+        "services.carpentry.benefits.quality",
+        "services.carpentry.benefits.durable"
       ]
     },
     {
       icon: PaintBucket,
-      title: "Painting Services",
-      description: "Professional interior and exterior painting that transforms your space with beautiful, lasting results.",
-      features: [
-        "Interior wall and ceiling painting",
-        "Exterior house painting",
-        "Cabinet refinishing",
-        "Deck and fence staining",
-        "Color consultation",
-        "Surface preparation and repair"
+      titleKey: "services.painting.title",
+      descriptionKey: "services.painting.description",
+      featuresKeys: [
+        "services.painting.features.interiorPainting",
+        "services.painting.features.exteriorPainting",
+        "services.painting.features.cabinetRefinishing",
+        "services.painting.features.deckStaining",
+        "services.painting.features.colorConsultation",
+        "services.painting.features.surfacePrep"
       ],
-      benefits: [
-        "Premium quality paints",
-        "Meticulous preparation",
-        "Clean, professional finish",
-        "Respect for your home"
+      benefitsKeys: [
+        "services.painting.benefits.premiumPaints",
+        "services.painting.benefits.meticulous",
+        "services.painting.benefits.cleanFinish",
+        "services.painting.benefits.respectHome"
       ]
     },
     {
       icon: Lightbulb,
-      title: "Full Renovations",
-      description: "Complete home transformations from concept to completion, bringing your vision to life with expert project management.",
-      features: [
-        "Kitchen remodeling",
-        "Bathroom renovations",
-        "Basement finishing",
-        "Whole-home updates",
-        "Design consultation"
+      titleKey: "services.renovation.title",
+      descriptionKey: "services.renovation.description",
+      featuresKeys: [
+        "services.renovation.features.kitchenRemodel",
+        "services.renovation.features.bathroomReno",
+        "services.renovation.features.basementFinish",
+        "services.renovation.features.wholeHome",
+        "services.renovation.features.designConsult"
       ],
-      benefits: [
-        "Comprehensive project management",
-        "NJ Licensed & Fully Insured",
-        "Transparent communication",
-        "Quality guaranteed"
+      benefitsKeys: [
+        "services.renovation.benefits.projectManagement",
+        "services.renovation.benefits.licensed",
+        "services.renovation.benefits.transparent",
+        "services.renovation.benefits.guaranteed"
       ]
     }
   ];
@@ -153,20 +153,20 @@ export default function Services() {
                   </div>
                   
                   <h2 className="text-4xl font-bold text-primary mb-4">
-                    {service.title}
+                    {t(service.titleKey)}
                   </h2>
                   
                   <p className="text-xl text-muted-foreground mb-8 leading-relaxed">
-                    {service.description}
+                    {t(service.descriptionKey)}
                   </p>
 
                   <div className="mb-8">
-                    <h3 className="text-xl font-bold text-primary mb-4">What We Offer:</h3>
+                    <h3 className="text-xl font-bold text-primary mb-4">{t('services.whatWeOffer')}</h3>
                     <ul className="grid sm:grid-cols-2 gap-3">
-                      {service.features.map((feature, i) => (
+                      {service.featuresKeys.map((featureKey, i) => (
                         <li key={i} className="flex items-start gap-2">
                           <CheckCircle2 className="h-5 w-5 text-secondary flex-shrink-0 mt-0.5" />
-                          <span className="text-foreground/90">{feature}</span>
+                          <span className="text-foreground/90">{t(featureKey)}</span>
                         </li>
                       ))}
                     </ul>
@@ -174,7 +174,7 @@ export default function Services() {
 
                   <Link href="/#contact">
                     <Button size="lg" className="bg-gradient-to-r from-secondary to-accent hover:from-secondary/90 hover:to-accent/90 text-primary text-lg px-8 py-6">
-                      Get Free Estimate
+                      {t('services.getEstimate')}
                       <ArrowRight className="ml-2 h-6 w-6" />
                     </Button>
                   </Link>
@@ -182,14 +182,14 @@ export default function Services() {
 
                 <Card className={`border-2 border-secondary/20 shadow-2xl ${idx % 2 === 1 ? 'lg:order-1' : ''}`}>
                   <CardContent className="p-8">
-                    <h3 className="text-2xl font-bold text-primary mb-6">Why Choose Us:</h3>
+                    <h3 className="text-2xl font-bold text-primary mb-6">{t('services.whyChooseUs')}</h3>
                     <ul className="space-y-4">
-                      {service.benefits.map((benefit, i) => (
+                      {service.benefitsKeys.map((benefitKey, i) => (
                         <li key={i} className="flex items-start gap-3 p-4 bg-muted/30 rounded-lg">
                           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-secondary to-accent flex items-center justify-center flex-shrink-0">
                             <CheckCircle2 className="h-5 w-5 text-white" />
                           </div>
-                          <span className="text-lg text-foreground font-medium pt-0.5">{benefit}</span>
+                          <span className="text-lg text-foreground font-medium pt-0.5">{t(benefitKey)}</span>
                         </li>
                       ))}
                     </ul>
@@ -202,8 +202,8 @@ export default function Services() {
                           ))}
                         </div>
                         <div>
-                          <p className="font-bold text-primary">4.9 Rating on Angi</p>
-                          <p className="text-sm text-muted-foreground">Trusted by hundreds of homeowners</p>
+                          <p className="font-bold text-primary">{t('services.rating')}</p>
+                          <p className="text-sm text-muted-foreground">{t('services.trustedBy')}</p>
                         </div>
                       </div>
                     </div>
@@ -234,7 +234,7 @@ export default function Services() {
             </a>
             <Link href="/#contact">
               <Button size="lg" variant="outline" className="bg-white/10 backdrop-blur-sm border-2 border-primary text-primary hover:bg-white/20 text-lg px-10 py-6">
-                Request Estimate Online
+                {t('services.requestEstimateOnline')}
                 <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </Link>
