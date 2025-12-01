@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { useEffect } from "react";
-import { getServiceSchemas, injectSchema } from "@/lib/schema";
+import { getLocalBusinessSchema, getServiceSchemas, injectSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -14,6 +14,10 @@ import {
 export default function Services() {
   const { t } = useLanguage();
   // Inject Service schemas for SEO
+  const schema = getLocalBusinessSchema();
+  const businessEmail = schema.email || "prodependable@gmail.com";
+  const businessPhone = schema.phone || "+12016374343";
+
   useEffect(() => {
     const schemas = getServiceSchemas();
     const cleanups = schemas.map(schema => injectSchema(schema));
@@ -229,7 +233,7 @@ export default function Services() {
             <a href="tel:2016374345">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-white text-lg px-10 py-6">
                 <Phone className="mr-2 h-6 w-6" />
-                (201) 637-4345
+                {businessPhone}
               </Button>
             </a>
             <Link href="/#contact">

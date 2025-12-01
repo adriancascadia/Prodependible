@@ -9,7 +9,7 @@ export default function ServiceAreaMap() {
   const circleRef = useRef<google.maps.Circle | null>(null);
 
   const centerLocation = { lat: 40.8448, lng: -74.0060 }; // Bergen County, NJ area
-  const serviceRadius = 40000; // 40km radius
+  const serviceRadius = 25000; // 25km radius
 
   const handleMapReady = (mapInstance: google.maps.Map) => {
     setMap(mapInstance);
@@ -132,7 +132,7 @@ export default function ServiceAreaMap() {
 
       <div className="text-center bg-muted/30 rounded-2xl p-8">
         <p className="text-lg text-muted-foreground">
-          <span className="font-bold text-primary">Service Radius:</span> Approximately 15 miles from Bergen County, NJ
+          <span className="font-bold text-primary">Service Radius:</span> Approximately 15 miles from Paramus, NJ
         </p>
       </div>
     </div>

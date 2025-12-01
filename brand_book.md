@@ -69,7 +69,7 @@ Dependable Home Improvement is a premier home improvement and handyman service s
 - Complete Home Renovations
 
 **Service Area:**
-Dependable Home Improvement serves a 25-mile radius around Bergen County, with dedicated presence in Hackensack, Teaneck, Fort Lee, Fair Lawn, Bergenfield, Paramus, Ridgewood, and Englewood.
+Dependable Home Improvement serves a 15-mile radius around Bergen County, with dedicated presence in Hackensack, Teaneck, Fort Lee, Fair Lawn, Bergenfield, Paramus, Ridgewood, and Englewood.
 
 ### Brand Overview
 

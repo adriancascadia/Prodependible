@@ -6,6 +6,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ChevronDown, HelpCircle, Phone, Mail } from "lucide-react";
 import { Link } from "wouter";
 import Breadcrumb from "@/components/Breadcrumb";
+import { getLocalBusinessSchema } from "@/lib/schema";
+
 
 interface FAQItem {
   question: string;
@@ -20,6 +22,10 @@ export default function FAQ() {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const schema = getLocalBusinessSchema();
+  const businessEmail = schema.email || "prodependable@gmail.com";
+  const businessPhone = schema.phone || "+12016374343";
+  
 
   useEffect(() => {
     fetch('/faq-data.json')
@@ -55,7 +61,7 @@ export default function FAQ() {
     {
       category: "Getting Started",
       question: "What areas do you serve?",
-      answer: "We primarily serve Bergen County and Passaic County. We're based in Northern New Jersey and typically work within a 15-mile radius. If you're outside this area, give us a call—we may be able to accommodate your project."
+      answer: "We primarily serve Bergen County and Passaic County. We're based in Northern New Jersey and typically work approximately 15 miles radius from Paramus, NJ. If you're outside this area, give us a call—we may be able to accommodate your project."
     },
     {
       category: "Services & Pricing",
@@ -257,7 +263,7 @@ export default function FAQ() {
                   <CardContent className="p-8 text-center">
                     <Phone className="h-12 w-12 text-primary mx-auto mb-4" />
                     <h3 className="text-xl font-bold text-primary mb-2">Call Us</h3>
-                    <p className="text-2xl font-bold text-primary">(201) 637-4345</p>
+                    <p className="text-2xl font-bold text-primary">{businessPhone}</p>
                     <p className="text-sm text-muted-foreground mt-2">Mon-Sat, 8AM-6PM</p>
                   </CardContent>
                 </Card>

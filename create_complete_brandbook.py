@@ -259,7 +259,7 @@ story.append(Paragraph("• <b>Complete Home Renovations</b> – Full-scale remo
 
 story.append(Paragraph("Service Area", h3_style))
 story.append(Paragraph(
-    "Dependable Home Improvement serves a 25-mile radius around Bergen County, New Jersey, with dedicated presence in "
+    "Dependable Home Improvement serves a 15-mile radius around Bergen County, New Jersey, with dedicated presence in "
     "Hackensack, Teaneck, Fort Lee, Fair Lawn, Bergenfield, Paramus, Ridgewood, Englewood, and surrounding communities. "
     "This focused service area allows for rapid response times and personalized local service.",
     body_style

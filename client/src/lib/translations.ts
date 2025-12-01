@@ -22,7 +22,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Super Service Award Winner 2024",
+      award: "Super Service Award Winner 2025",
       tagline: "Crafting Excellence, Building Trust",
       subtitle: "Transform your property with 20+ years of masterful craftsmanship. From stunning decks to flawless door installations, we deliver premium quality that stands the test of time.",
       cta: "Get Free Estimate",
@@ -32,12 +32,12 @@ export const translations = {
     credentials: {
       title: "Licensed, Insured & Award-Winning",
       subtitle: "Your Trust is Our Foundation",
-      angi: "Angi Super Servicio",
-      award_winning: "Ganador de Premios",
+      angi: "Angi Super Service",
+      award_winning: "Award Winning",
       general: "General Liability",
       fully_insured: "Fully Insured",
       workers: "Workers Comp",
-      button: "NJ Home Improvement License #13VH12345600"
+      button: "NJ Home Improvement License #13VH09689200"
     },
     // Stats
     stats: {
@@ -322,7 +322,8 @@ export const translations = {
       services: "Services",
       serviceAreas: "Service Areas",
       contact: "Contact Us",
-      rights: "All rights reserved."
+      rights: "All rights reserved.",
+      award: "Super Service Award Winners 2024 & 2025 • Angi Approved Pro"
     }
   },
   ru: {
@@ -346,7 +347,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Победитель премии Super Service 2024",
+      award: "Победитель премии Super Service 2025",
       tagline: "Создаём качество, строим доверие",
       subtitle: "Преобразите вашу собственность с 20+ летним опытом мастерства. От потрясающих террас до безупречной установки дверей - мы обеспечиваем премиальное качество, которое выдерживает испытание временем.",
       cta: "Бесплатная оценка",
@@ -354,14 +355,14 @@ export const translations = {
     },
     //Credentials
     credentials: {
-      title: "Licensed, Insured & Award-Winning",
-      subtitle: "Your Trust is Our Foundation",
-      angi: "Angi Super Servicio",
-      general: "General Liability",
-      fully_insured: "Fully Insured",
-      award_winning: "Ganador de Premios",
-      workers: "Workers Comp",
-      button: "NJ Home Improvement License #13VH12345600"
+      title: "Лицензированная, застрахованная и отмеченная наградами компания",
+      subtitle: "Ваше доверие - наша основа",
+      angi: "Анжи супер сервис",
+      general: "Общая ответственность",
+      fully_insured: "Полностью застрахован",
+      award_winning: "Награждённая компания",
+      workers: "Компенсация работникам",
+      button: "Лицензия на улучшение дома NJ #13VH09689200"
     },
     // Stats
     stats: {
@@ -572,7 +573,8 @@ export const translations = {
       services: "Услуги",
       serviceAreas: "Районы обслуживания",
       contact: "Связаться с нами",
-      rights: "Все права защищены."
+      rights: "Все права защищены.",
+      award: "Победители премии Super Service 2024 и 2025 • Angi Approved Pro"
     }
   },
     es: {
@@ -596,7 +598,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Super Service Award Winner 2024",
+      award: "Super Service Award Winner 2025",
       tagline: "Creando Excelencia, Construyendo Confianza",
       subtitle: "Transforme su propiedad con más de 20 años de artesanía magistral. Desde terrazas impresionantes hasta instalaciones de puertas impecables, entregamos calidad premium que resiste el paso del tiempo.",
       cta: "Cotización Gratuita",
@@ -604,11 +606,11 @@ export const translations = {
     },
     //Credentials
     credentials: {
-      title: "Licensed, Insured & Award-Winning",
-      subtitle: "Your Trust is Our Foundation",
+      title: "Licenciada, asegurada y galardonada",
+      subtitle: "Tu confianza es nuestra base",
       angie: "Angi Super Servicio",
-      award_winning: "Ganador de Premios",
-      button: "NJ Home Improvement License #13VH12345600"
+      award_winning: "Ganadora de Premios",
+      button: "NJ Licencia de mejoras para el hogar #13VH09689200"
     },
     // Stats
     stats: {
@@ -810,7 +812,8 @@ export const translations = {
       services: "Servicios",
       serviceAreas: "Áreas de Servicio",
       contact: "Contáctenos",
-      rights: "Todos los derechos reservados."
+      rights: "Todos los derechos reservados.",
+      award: "Ganadores del Super Servicio 2024 y 2025 • Angi Approved Pro"
     }
   }
 };

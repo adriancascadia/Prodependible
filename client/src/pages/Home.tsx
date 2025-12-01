@@ -1,11 +1,33 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Phone, Mail, Award, Users, Home as HomeIcon, Shield, Star, CheckCircle2, 
-  Wrench, Hammer, PaintBucket, Lightbulb, Facebook, Instagram, Linkedin,
-  MessageCircle, ArrowRight, Clock, TrendingUp, Target, Zap, Image as ImageIcon, MapPin,
-  Search, Menu, X
+import {
+  Phone,
+  Mail,
+  Award,
+  Users,
+  Home as HomeIcon,
+  Shield,
+  Star,
+  CheckCircle2,
+  Wrench,
+  Hammer,
+  PaintBucket,
+  Lightbulb,
+  Facebook,
+  Instagram,
+  Linkedin,
+  MessageCircle,
+  ArrowRight,
+  Clock,
+  TrendingUp,
+  Target,
+  Zap,
+  Image as ImageIcon,
+  MapPin,
+  Search,
+  Menu,
+  X,
 } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Link } from "wouter";
@@ -27,9 +49,19 @@ import { getLocalBusinessSchema, injectSchema } from "@/lib/schema";
 export default function Home() {
   const [scrolled, setScrolled] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
-  const [counts, setCounts] = useState({ years: 0, projects: 0, clients: 0, rating: 0 });
+  const [counts, setCounts] = useState({
+    years: 0,
+    projects: 0,
+    clients: 0,
+    rating: 0,
+  });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const { t } = useLanguage();
+
+  // Get email from schema
+  const schema = getLocalBusinessSchema();
+  const businessEmail = schema.email || "prodependable@gmail.com";
+  const businessPhone = schema.phone || "+12016374343";
 
   // Inject LocalBusiness schema for SEO
   useEffect(() => {
@@ -41,7 +73,7 @@ export default function Home() {
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
-      
+
       // Trigger stats animation when scrolled into view
       const statsSection = document.getElementById("stats");
       if (statsSection && !statsVisible) {
@@ -61,7 +93,7 @@ export default function Home() {
       const duration = 2000;
       const steps = 60;
       const interval = duration / steps;
-      
+
       let step = 0;
       const timer = setInterval(() => {
         step++;
@@ -70,15 +102,20 @@ export default function Home() {
           years: Math.floor(30 * progress),
           projects: Math.floor(500 * progress),
           clients: Math.floor(300 * progress),
-          rating: (4.9 * progress).toFixed(1) as any
+          rating: (4.9 * progress).toFixed(1) as any,
         });
-        
+
         if (step >= steps) {
           clearInterval(timer);
-          setCounts({ years: 30, projects: 500, clients: 300, rating: 4.9 as any });
+          setCounts({
+            years: 30,
+            projects: 500,
+            clients: 300,
+            rating: 4.9 as any,
+          });
         }
       }, interval);
-      
+
       return () => clearInterval(timer);
     }
   }, [statsVisible]);
@@ -91,78 +128,111 @@ export default function Home() {
     <div className="min-h-screen">
       {/* WhatsApp Floating Button */}
       <WhatsAppButton />
-      
+
       {/* Promotional Banner */}
       <PromoBanner />
-      
+
       {/* Premium Navigation */}
-      <nav className={`transition-all duration-500 ${
-        scrolled 
-          ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-border" 
-          : "bg-gradient-to-b from-black/60 to-transparent"
-      }`}>
+      <nav
+        className={`transition-all duration-500 ${
+          scrolled
+            ? "bg-white/95 backdrop-blur-xl shadow-xl border-b border-border"
+            : "bg-gradient-to-b from-black/60 to-transparent"
+        }`}
+      >
         <div className="w-full px-4 py-5">
           <div className="flex items-center justify-between gap-8">
             <div className="flex items-center gap-4">
-              <img src="/logo.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
+              <img
+                src="/logo.png"
+                alt="Dependable Home Improvement"
+                className="h-24 w-24 flex-shrink-0"
+              />
               <div className="max-w-[180px]">
-                <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}>
-                  {t('header.title')}
+                <h1
+                  className={`text-lg font-bold leading-tight transition-colors ${scrolled ? "text-primary" : "text-white"}`}
+                >
+                  {t("header.title")}
                 </h1>
-                <p className={`text-xs font-medium transition-colors ${scrolled ? "text-secondary" : "text-secondary"}`}>
-                  {t('header.subtitle')}
+                <p
+                  className={`text-xs font-medium transition-colors ${scrolled ? "text-secondary" : "text-secondary"}`}
+                >
+                  {t("header.subtitle")}
                 </p>
               </div>
             </div>
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
-              <Link href="/services" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.services')}
+              <Link
+                href="/services"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.services")}
               </Link>
-              <a href="#gallery" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.gallery')}
+              <a
+                href="#gallery"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.gallery")}
               </a>
-              <Link href="/blog" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.blog')}
+              <Link
+                href="/blog"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.blog")}
               </Link>
-              <Link href="/videos" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.videos')}
+              <Link
+                href="/videos"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.videos")}
               </Link>
-              <Link href="/faq" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.faq')}
+              <Link
+                href="/faq"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.faq")}
               </Link>
-              <Link href="/team" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.team')}
+              <Link
+                href="/team"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.team")}
               </Link>
-              <a href="#contact" className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
-                {t('nav.contact')}
+              <a
+                href="#contact"
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
+                {t("nav.contact")}
               </a>
               <Link href="/search">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   className={`transition-colors ${scrolled ? "text-primary hover:text-secondary" : "text-white hover:text-secondary"}`}
                 >
                   <Search className="h-5 w-5" />
                 </Button>
               </Link>
-              <div className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}>
+              <div
+                className={`font-medium transition-colors hover:text-secondary ${scrolled ? "text-primary" : "text-white"}`}
+              >
                 <LanguageToggle />
               </div>
-              
-              <Button 
+
+              <Button
                 className="bg-secondary hover:bg-secondary/90 text-primary font-bold shadow-lg hover:shadow-xl transition-all"
                 onClick={scrollToContact}
               >
-                {t('hero.cta')}
+                {t("hero.cta")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
-            
+
             {/* Mobile Menu Button */}
             <div className="lg:hidden flex items-center gap-2">
               <Link href="/search">
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="icon"
                   className={`transition-colors ${scrolled ? "text-primary hover:text-secondary" : "text-white hover:text-secondary"}`}
                 >
@@ -175,7 +245,11 @@ export default function Home() {
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className={`transition-colors ${scrolled ? "text-primary hover:text-secondary" : "text-white hover:text-secondary"}`}
               >
-                {mobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+                {mobileMenuOpen ? (
+                  <X className="h-6 w-6" />
+                ) : (
+                  <Menu className="h-6 w-6" />
+                )}
               </Button>
             </div>
           </div>
@@ -188,48 +262,48 @@ export default function Home() {
           <div className="container py-6 space-y-4">
             <Link href="/services" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.services')}
+                {t("nav.services")}
               </div>
             </Link>
             <a href="#gallery" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.gallery')}
+                {t("nav.gallery")}
               </div>
             </a>
             <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.blog')}
+                {t("nav.blog")}
               </div>
             </Link>
             <Link href="/videos" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.videos')}
+                {t("nav.videos")}
               </div>
             </Link>
             <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.faq')}
+                {t("nav.faq")}
               </div>
             </Link>
             <Link href="/team" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.team')}
+                {t("nav.team")}
               </div>
             </Link>
             <a href="#contact" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                {t('nav.contact')}
+                {t("nav.contact")}
               </div>
             </a>
             <div className="pt-4 border-t border-border">
-              <Button 
+              <Button
                 className="w-full bg-secondary hover:bg-secondary/90 text-primary font-bold shadow-lg"
                 onClick={() => {
                   setMobileMenuOpen(false);
                   scrollToContact();
                 }}
               >
-                {t('hero.cta')}
+                {t("hero.cta")}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -248,51 +322,52 @@ export default function Home() {
           className="absolute inset-0 w-full h-full object-cover"
           style={{ filter: "brightness(0.4)" }}
         >
-          <source src="https://prodependable.com/wp-content/uploads/2025/09/greySiteVid.mp4" type="video/mp4" />
+          <source
+            src="https://prodependable.com/wp-content/uploads/2025/09/greySiteVid.mp4"
+            type="video/mp4"
+          />
           {/* Fallback background image */}
-          <div 
+          <div
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: "url(/hero-background.jpg)" }}
           />
         </video>
-        
+
         {/* Solid overlay */}
         <div className="absolute inset-0 bg-primary/1" />
-        
+
         {/* Animated geometric shapes */}
         <div className="absolute top-20 right-20 w-64 h-64 bg-secondary/10 rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 left-20 w-96 h-96 bg-accent/10 rounded-full blur-3xl animate-pulse delay-1000" />
-        
+
         <div className="relative z-10 container mx-auto px-12 text-center flex flex-col items-center justify-center py-12">
           <Badge className="mb-20 mt-16 bg-secondary/90 backdrop-blur-sm text-primary px-6 py-3 text-base font-bold shadow-2xl animate-fade-in">
             <Award className="h-5 w-5 mr-2 inline" />
-            {t('hero.award')}
+            {t("hero.award")}
           </Badge>
-          
+
           <h2 className="text-6xl md:text-8xl font-bold text-white mb-8 leading-tight animate-fade-in-up">
-            <span className="text-secondary">
-              {t('hero.tagline')}
-            </span>
+            <span className="text-secondary">{t("hero.tagline")}</span>
           </h2>
-          
+
           <p className="text-2xl md:text-3xl text-white/95 mb-12 max-w-4xl mx-auto font-light animate-fade-in-up delay-200">
-            {t('hero.subtitle')}
+            {t("hero.subtitle")}
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-fade-in-up delay-400">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               className="bg-secondary hover:bg-secondary/90 text-primary text-xl px-10 py-8 font-bold shadow-2xl hover:shadow-secondary/50 transition-all transform hover:scale-105"
               onClick={scrollToContact}
             >
-              {t('hero.cta')}
+              {t("hero.cta")}
               <ArrowRight className="ml-3 h-6 w-6" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
+            <Button
+              size="lg"
+              variant="outline"
               className="bg-white/10 backdrop-blur-md border-2 border-white text-white hover:bg-white hover:text-primary text-xl px-10 py-8 font-bold transition-all transform hover:scale-105"
-              onClick={() => window.location.href = "tel:2016374345"}
+              onClick={() => (window.location.href = "tel:2016374345")}
             >
               <Phone className="mr-3 h-6 w-6" />
               (201) 637-4343
@@ -302,12 +377,20 @@ export default function Home() {
           {/* Social Media Links */}
           <div className="mt-16 flex items-center justify-center gap-6 animate-fade-in-up delay-600">
             <p className="text-white/80 font-medium mr-4">Follow Us:</p>
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-               className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110">
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110"
+            >
               <Facebook className="h-5 w-5 text-white" />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-               className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110">
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-12 h-12 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 flex items-center justify-center hover:bg-secondary hover:border-secondary transition-all transform hover:scale-110"
+            >
               <Instagram className="h-5 w-5 text-white" />
             </a>
           </div>
@@ -324,13 +407,17 @@ export default function Home() {
       {/* Prominent Credentials Showcase */}
       <section className="py-16 bg-white border-y-4 border-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(139,115,85,0.05)_1px,_transparent_1px)] bg-[length:30px_30px]" />
-        
+
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">{t('credentials.title')}</h2>
-            <p className="text-lg text-muted-foreground">{t('credentials.subtitle')}</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-3">
+              {t("credentials.title")}
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              {t("credentials.subtitle")}
+            </p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
             {/* Angi Super Service Award */}
             <div className="bg-gradient-to-br from-secondary/10 to-accent/10 rounded-2xl p-8 border-2 border-secondary shadow-xl hover:shadow-2xl transition-all transform hover:scale-105">
@@ -338,8 +425,12 @@ export default function Home() {
                 <div className="w-24 h-24 rounded-full bg-secondary flex items-center justify-center mb-4 shadow-lg">
                   <Award className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.angi')}</h3>
-                <p className="text-3xl font-bold text-secondary mb-1">{t('credentials.award_winning')}</p>
+                <h3 className="text-xl font-bold text-primary mb-2">
+                  {t("credentials.angi")}
+                </h3>
+                <p className="text-3xl font-bold text-secondary mb-1">
+                  {t("credentials.award_winning")}
+                </p>
                 <p className="text-lg text-muted-foreground">2025</p>
               </div>
             </div>
@@ -350,9 +441,15 @@ export default function Home() {
                 <div className="w-24 h-24 rounded-full bg-green-600 flex items-center justify-center mb-4 shadow-lg">
                   <Shield className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.general')}</h3>
-                <p className="text-2xl font-bold text-green-600 mb-1">{t('credentials.fully_insured')}</p>
-                <p className="text-sm text-muted-foreground">Comprehensive Coverage</p>
+                <h3 className="text-xl font-bold text-primary mb-2">
+                  {t("credentials.general")}
+                </h3>
+                <p className="text-2xl font-bold text-green-600 mb-1">
+                  {t("credentials.fully_insured")}
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Comprehensive Coverage
+                </p>
               </div>
             </div>
 
@@ -362,9 +459,15 @@ export default function Home() {
                 <div className="w-24 h-24 rounded-full bg-purple-600 flex items-center justify-center mb-4 shadow-lg">
                   <Users className="h-12 w-12 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-primary mb-2">{t('credentials.workers')}</h3>
-                <p className="text-2xl font-bold text-purple-600 mb-1">Fully Insured</p>
-                <p className="text-sm text-muted-foreground">Employee Protection</p>
+                <h3 className="text-xl font-bold text-primary mb-2">
+                  {t("credentials.workers")}
+                </h3>
+                <p className="text-2xl font-bold text-purple-600 mb-1">
+                  Fully Insured
+                </p>
+                <p className="text-sm text-muted-foreground">
+                  Employee Protection
+                </p>
               </div>
             </div>
           </div>
@@ -373,41 +476,56 @@ export default function Home() {
           <div className="mt-12 text-center">
             <div className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full shadow-xl">
               <CheckCircle2 className="h-6 w-6 text-secondary" />
-              <span className="font-bold text-lg">{t('credentials.button')}</span>
+              <span className="font-bold text-lg">
+                {t("credentials.button")}
+              </span>
             </div>
           </div>
         </div>
       </section>
 
       {/* Animated Stats Section */}
-      <section id="stats" className="py-20 bg-primary text-white relative overflow-hidden">
+      <section
+        id="stats"
+        className="py-20 bg-primary text-white relative overflow-hidden"
+      >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:50px_50px]" />
         </div>
-        
+
         <div className="container mx-auto px-12 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             <div className="text-center transform hover:scale-110 transition-transform">
-              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.years}+</div>
-              <p className="text-xl text-white/90">{t('stats.experience')}</p>
+              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">
+                {counts.years}+
+              </div>
+              <p className="text-xl text-white/90">{t("stats.experience")}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
-              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.projects}+</div>
-              <p className="text-xl text-white/90">{t('stats.projects')}</p>
+              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">
+                {counts.projects}+
+              </div>
+              <p className="text-xl text-white/90">{t("stats.projects")}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
-              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.clients}+</div>
-              <p className="text-xl text-white/90">{t('stats.satisfaction')}</p>
+              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">
+                {counts.clients}+
+              </div>
+              <p className="text-xl text-white/90">{t("stats.satisfaction")}</p>
             </div>
             <div className="text-center transform hover:scale-110 transition-transform">
-              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">{counts.rating}</div>
-              <p className="text-xl text-white/90">{t('stats.warranty')}</p>
+              <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">
+                {counts.rating}
+              </div>
+              <p className="text-xl text-white/90">{t("stats.warranty")}</p>
             </div>
           </div>
-          
+
           {/* Review Platform Badges */}
           <div className="mt-16 pt-16 border-t border-white/20">
-            <p className="text-center text-xl text-white/90 mb-8 font-medium">{t('platform.title')}</p>
+            <p className="text-center text-xl text-white/90 mb-8 font-medium">
+              {t("platform.title")}
+            </p>
             <div className="flex flex-wrap items-center justify-center gap-8">
               <div className="bg-white/10 backdrop-blur-sm rounded-xl px-8 py-6 border border-white/20 hover:bg-white/20 transition-all">
                 <div className="flex items-center gap-3">
@@ -441,7 +559,9 @@ export default function Home() {
                   <CheckCircle2 className="h-8 w-8 text-secondary" />
                   <div>
                     <p className="text-xl font-bold text-white">Since 2017</p>
-                    <p className="text-sm text-white/80">30+ Years Experience</p>
+                    <p className="text-sm text-white/80">
+                      30+ Years Experience
+                    </p>
                   </div>
                 </div>
               </div>
@@ -455,49 +575,60 @@ export default function Home() {
         <div className="container mx-auto px-12">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary/10 text-secondary border-secondary px-6 py-2 text-base">
-              {t('features.badge')}
+              {t("features.badge")}
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">{t('features.title')}</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              {t("features.title")}
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('features.subtitle')}
+              {t("features.subtitle")}
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { 
-                icon: Award, 
-                title: "30+ Years Mastery", 
+              {
+                icon: Award,
+                title: "30+ Years Mastery",
                 desc: "Three decades of perfecting our craft and exceeding expectations",
-                color: "from-secondary to-accent"
+                color: "from-secondary to-accent",
               },
-              { 
-                icon: Users, 
-                title: "Bilingual Excellence", 
+              {
+                icon: Users,
+                title: "Bilingual Excellence",
                 desc: "Seamless communication in Russian and English for your convenience",
-                color: "from-accent to-secondary"
+                color: "from-accent to-secondary",
               },
-              { 
-                icon: Shield, 
-                title: "Protected Investment", 
+              {
+                icon: Shield,
+                title: "Protected Investment",
                 desc: "Comprehensive warranties ensuring your peace of mind",
-                color: "from-secondary to-accent"
+                color: "from-secondary to-accent",
               },
-              { 
-                icon: Clock, 
-                title: "Swift Execution", 
+              {
+                icon: Clock,
+                title: "Swift Execution",
                 desc: "Efficient timelines without compromising on quality",
-                color: "from-accent to-secondary"
-              }
+                color: "from-accent to-secondary",
+              },
             ].map((feature, idx) => (
-              <Card key={idx} className="group relative overflow-hidden border-2 hover:border-secondary transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-2">
+              <Card
+                key={idx}
+                className="group relative overflow-hidden border-2 hover:border-secondary transition-all duration-500 hover:shadow-2xl transform hover:-translate-y-2"
+              >
                 <div className="absolute inset-0 bg-secondary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 <CardContent className="p-8 relative z-10">
-                  <div className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.color} mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-gradient-to-br ${feature.color} mb-6 transform group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}
+                  >
                     <feature.icon className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">{feature.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed">{feature.desc}</p>
+                  <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
+                    {feature.title}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.desc}
+                  </p>
                 </CardContent>
               </Card>
             ))}
@@ -513,9 +644,13 @@ export default function Home() {
               <ImageIcon className="h-5 w-5 mr-2 inline" />
               Video Tour
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">See Our Work in Action</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              See Our Work in Action
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Take a virtual tour of our completed projects across Bergen County. Watch detailed walkthroughs showcasing our craftsmanship and attention to detail.
+              Take a virtual tour of our completed projects across Bergen
+              County. Watch detailed walkthroughs showcasing our craftsmanship
+              and attention to detail.
             </p>
           </div>
           <ProjectShowcaseVideo />
@@ -524,18 +659,20 @@ export default function Home() {
 
       {/* Services Section with Premium Design */}
       <section id="services" className="py-24 relative overflow-hidden">
-        <div 
+        <div
           className="absolute inset-0 bg-cover bg-center opacity-5"
           style={{ backgroundImage: "url(/services-bg.jpg)" }}
         />
         <div className="absolute inset-0 bg-muted/60" />
-        
+
         <div className="container mx-auto px-12 relative z-10">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-primary text-white px-6 py-2 text-base">
               Our Expertise
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Premium Services</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              Premium Services
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Comprehensive solutions for residential and commercial properties
             </p>
@@ -543,41 +680,51 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {[
-              { 
-                icon: Wrench, 
-                title: "Handyman Services", 
+              {
+                icon: Wrench,
+                title: "Handyman Services",
                 desc: "Expert repairs and maintenance for every corner of your property",
-                features: ["General Repairs", "Maintenance", "Quick Fixes"]
+                features: ["General Repairs", "Maintenance", "Quick Fixes"],
               },
-              { 
-                icon: Hammer, 
-                title: "Carpentry & Woodwork", 
+              {
+                icon: Hammer,
+                title: "Carpentry & Woodwork",
                 desc: "Masterful woodworking from furniture repair to custom creations",
-                features: ["Furniture Repair", "Custom Work", "Refinishing"]
+                features: ["Furniture Repair", "Custom Work", "Refinishing"],
               },
-              { 
-                icon: PaintBucket, 
-                title: "Painting & Finishing", 
+              {
+                icon: PaintBucket,
+                title: "Painting & Finishing",
                 desc: "Flawless interior and exterior painting with premium materials",
-                features: ["Interior Paint", "Exterior Paint", "Finishing"]
+                features: ["Interior Paint", "Exterior Paint", "Finishing"],
               },
-              { 
-                icon: Lightbulb, 
-                title: "Complete Renovations", 
+              {
+                icon: Lightbulb,
+                title: "Complete Renovations",
                 desc: "Full-scale improvements including tile, drywall, and flooring",
-                features: ["Tile Work", "Drywall", "Flooring"]
-              }
+                features: ["Tile Work", "Drywall", "Flooring"],
+              },
             ].map((service, idx) => (
-              <Card key={idx} className="group relative overflow-hidden border-2 hover:border-secondary transition-all duration-500 hover:shadow-2xl bg-white/80 backdrop-blur-sm">
+              <Card
+                key={idx}
+                className="group relative overflow-hidden border-2 hover:border-secondary transition-all duration-500 hover:shadow-2xl bg-white/80 backdrop-blur-sm"
+              >
                 <CardContent className="p-8">
                   <div className="inline-flex items-center justify-center w-20 h-20 rounded-2xl bg-secondary mb-6 transform group-hover:scale-110 group-hover:rotate-12 transition-all duration-500">
                     <service.icon className="h-10 w-10 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">{service.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{service.desc}</p>
+                  <h3 className="text-2xl font-bold text-primary mb-4 group-hover:text-secondary transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {service.desc}
+                  </p>
                   <ul className="space-y-2">
                     {service.features.map((feature, i) => (
-                      <li key={i} className="flex items-center text-sm text-muted-foreground">
+                      <li
+                        key={i}
+                        className="flex items-center text-sm text-muted-foreground"
+                      >
                         <CheckCircle2 className="h-4 w-4 text-secondary mr-2 flex-shrink-0" />
                         {feature}
                       </li>
@@ -591,16 +738,21 @@ export default function Home() {
       </section>
 
       {/* Project Gallery Section */}
-      <section id="gallery" className="py-24 bg-muted/20 relative overflow-hidden">
+      <section
+        id="gallery"
+        className="py-24 bg-muted/20 relative overflow-hidden"
+      >
         <div className="container mx-auto px-12">
           <div className="text-center mb-20">
-                <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base font-bold">
+            <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base font-bold">
               <ImageIcon className="h-5 w-5 mr-2 inline" />
-              {t('gallery.button')}
+              {t("gallery.button")}
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">{t('gallery.title')}</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              {t("gallery.title")}
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              {t('gallery.subtitle')}
+              {t("gallery.subtitle")}
             </p>
           </div>
 
@@ -608,32 +760,32 @@ export default function Home() {
             <ProjectCard
               beforeImage="/gallery/deck-refinish-before.jpg"
               afterImage="/gallery/deck-refinish-after.jpg"
-              title={t('gallery.deck.title')}
-              category={t('gallery.deck.category')}
+              title={t("gallery.deck.title")}
+              category={t("gallery.deck.category")}
             />
             <ProjectCard
               beforeImage="/gallery/deck-remodel-before.jpg"
               afterImage="/gallery/deck-remodel-after.jpg"
-              title={t('gallery.completeDeck.title')}
-              category={t('gallery.completeDeck.category')}
+              title={t("gallery.completeDeck.title")}
+              category={t("gallery.completeDeck.category")}
             />
             <ProjectCard
               beforeImage="/gallery/stair-before.png"
               afterImage="/gallery/stair-after.png"
-              title={t('gallery.stairs.title')}
-              category={t('gallery.stairs.category')}
+              title={t("gallery.stairs.title")}
+              category={t("gallery.stairs.category")}
             />
             <ProjectCard
               beforeImage="/gallery/patio-door-before.jpg"
               afterImage="/gallery/patio-door-after.jpg"
-              title={t('gallery.patioDoor.title')}
-              category={t('gallery.patioDoor.category')}
+              title={t("gallery.patioDoor.title")}
+              category={t("gallery.patioDoor.category")}
             />
             <ProjectCard
               beforeImage="/gallery/cellar-door-before.jpg"
               afterImage="/gallery/cellar-door-after.png"
-              title={t('gallery.cellarDoor.title')}
-              category={t('gallery.cellarDoor.category')}
+              title={t("gallery.cellarDoor.title")}
+              category={t("gallery.cellarDoor.category")}
             />
             <ProjectCard
               beforeImage="/gallery/basement-before.jpg"
@@ -644,12 +796,12 @@ export default function Home() {
           </div>
 
           <div className="text-center">
-              <div className="inline-block bg-secondary/10 rounded-2xl p-8 border-2 border-secondary/20">
+            <div className="inline-block bg-secondary/10 rounded-2xl p-8 border-2 border-secondary/20">
               <p className="text-2xl font-bold text-primary mb-4">
                 Ready to see your own transformation?
               </p>
-              <Button 
-                size="lg" 
+              <Button
+                size="lg"
                 className="bg-secondary hover:bg-secondary/90 text-primary text-lg px-10 py-6 font-bold shadow-xl transform hover:scale-105 transition-all"
                 onClick={scrollToContact}
               >
@@ -662,11 +814,14 @@ export default function Home() {
       </section>
 
       {/* Process Timeline */}
-      <section id="process" className="py-24 bg-primary text-white relative overflow-hidden">
+      <section
+        id="process"
+        className="py-24 bg-primary text-white relative overflow-hidden"
+      >
         <div className="absolute inset-0 opacity-10">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_50%,_rgba(255,255,255,0.1)_1px,_transparent_1px)] bg-[length:40px_40px]" />
         </div>
-        
+
         <div className="container mx-auto px-12 relative z-10">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base">
@@ -674,16 +829,33 @@ export default function Home() {
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold mb-6">How We Work</h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto">
-              A streamlined approach ensuring quality results from start to finish
+              A streamlined approach ensuring quality results from start to
+              finish
             </p>
           </div>
 
           <div className="grid md:grid-cols-4 gap-8 max-w-6xl mx-auto">
             {[
-              { icon: MessageCircle, title: "1. Consultation", desc: "Free estimate and project discussion" },
-              { icon: Target, title: "2. Planning", desc: "Detailed proposal and timeline" },
-              { icon: Zap, title: "3. Execution", desc: "Expert craftsmanship in action" },
-              { icon: CheckCircle2, title: "4. Completion", desc: "Final walkthrough and satisfaction" }
+              {
+                icon: MessageCircle,
+                title: "1. Consultation",
+                desc: "Free estimate and project discussion",
+              },
+              {
+                icon: Target,
+                title: "2. Planning",
+                desc: "Detailed proposal and timeline",
+              },
+              {
+                icon: Zap,
+                title: "3. Execution",
+                desc: "Expert craftsmanship in action",
+              },
+              {
+                icon: CheckCircle2,
+                title: "4. Completion",
+                desc: "Final walkthrough and satisfaction",
+              },
             ].map((step, idx) => (
               <div key={idx} className="relative">
                 {idx < 3 && (
@@ -710,14 +882,16 @@ export default function Home() {
               <Star className="h-4 w-4 mr-2 inline fill-secondary" />
               Trusted on Angi
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Client Success Stories</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              Client Success Stories
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Real experiences from satisfied homeowners who trust us
             </p>
           </div>
 
           <Testimonials />
-          
+
           {/* Video Testimonials */}
           {/* <div className="mt-24">
             <div className="text-center mb-16">
@@ -732,11 +906,13 @@ export default function Home() {
             </div>
             <VideoTestimonials />
           </div> */}
-          
+
           {/* Review Widgets */}
           <div className="mt-24">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">Verified Reviews & Ratings</h2>
+              <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
+                Verified Reviews & Ratings
+              </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 See what our customers are saying on trusted review platforms
               </p>
@@ -754,9 +930,12 @@ export default function Home() {
               <MapPin className="h-5 w-5 mr-2 inline" />
               Service Coverage
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">We're Local & Ready to Help</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              We're Local & Ready to Help
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Serving Northern New Jersey and surrounding areas with pride since 2017, backed by 30+ years of construction expertise
+              Serving Northern New Jersey and surrounding areas with pride since
+              2017, backed by 30+ years of construction expertise
             </p>
           </div>
           <ServiceAreaMap />
@@ -770,9 +949,12 @@ export default function Home() {
             <Badge className="mb-6 bg-primary text-white px-6 py-2 text-base">
               Get Started
             </Badge>
-            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">Request Your Free Estimate</h2>
+            <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
+              Request Your Free Estimate
+            </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Fill out our quick form and we'll get back to you within 24 hours with a detailed estimate
+              Fill out our quick form and we'll get back to you within 24 hours
+              with a detailed estimate
             </p>
           </div>
           <ContactForm />
@@ -785,51 +967,75 @@ export default function Home() {
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,_rgba(0,0,0,0.1)_1px,_transparent_1px)] bg-[length:50px_50px]" />
         </div>
-        
+
         <div className="container mx-auto px-12 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-8">
               Ready to Transform Your Space?
             </h2>
             <p className="text-2xl text-primary/80 mb-12">
-              Get your free estimate today and experience the Dependable difference
+              Get your free estimate today and experience the Dependable
+              difference
             </p>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12">
               <Card className="border-2 border-primary/20 hover:border-primary transition-all duration-300 hover:shadow-2xl transform hover:scale-105 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-10">
                   <Phone className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-3xl font-bold text-primary mb-4">Call Us</h3>
-                  <a href="tel:2016374345" className="text-2xl text-primary/80 hover:text-primary transition-colors font-bold block">
-                    (201) 637-4343
+                  <h3 className="text-3xl font-bold text-primary mb-4">
+                    Call Us
+                  </h3>
+                  <a
+                    href="tel:2016374345"
+                    className="text-2xl text-primary/80 hover:text-primary transition-colors font-bold block"
+                  >
+                    {businessPhone}
                   </a>
-                  <p className="text-muted-foreground mt-4">Available Mon-Sat, 8AM-6PM</p>
+                  <p className="text-muted-foreground mt-4">
+                    Available Mon-Sat, 8AM-6PM
+                  </p>
                 </CardContent>
               </Card>
 
               <Card className="border-2 border-primary/20 hover:border-primary transition-all duration-300 hover:shadow-2xl transform hover:scale-105 bg-white/90 backdrop-blur-sm">
                 <CardContent className="p-10">
                   <Mail className="h-16 w-16 text-primary mx-auto mb-6" />
-                  <h3 className="text-3xl font-bold text-primary mb-4">Email Us</h3>
-                  <a href="mailto:prodendable@gmail.com" className="text-xl text-primary/80 hover:text-primary transition-colors break-all">
-                    prodendable@gmail.com
+                  <h3 className="text-3xl font-bold text-primary mb-4">
+                    Email Us
+                  </h3>
+                  <a
+                    href="mailto:prodependable@gmail.com"
+                    className="text-xl text-primary/80 hover:text-primary transition-colors break-all"
+                  >
+                    {businessEmail}
                   </a>
-                  <p className="text-muted-foreground mt-4">We respond within 24 hours</p>
+                  <p className="text-muted-foreground mt-4">
+                    We respond within 24 hours
+                  </p>
                 </CardContent>
               </Card>
             </div>
 
             <div className="flex items-center justify-center gap-6">
-              <p className="text-primary/80 font-bold text-lg">Connect With Us:</p>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" 
-                 className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110">
+              <p className="text-primary/80 font-bold text-lg">
+                Connect With Us:
+              </p>
+              <a
+                href="https://facebook.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110"
+              >
                 <Facebook className="h-6 w-6 text-primary hover:text-white transition-colors" />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
-                 className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110">
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border-2 border-primary/20 flex items-center justify-center hover:bg-primary hover:border-primary transition-all transform hover:scale-110"
+              >
                 <Instagram className="h-6 w-6 text-primary hover:text-white transition-colors" />
               </a>
-            
             </div>
           </div>
         </div>
@@ -845,36 +1051,94 @@ export default function Home() {
       {/* Premium Footer */}
       <footer className="bg-primary text-white py-16">
         <div className="container mx-auto px-12">
-          
           <div className="grid md:grid-cols-4 gap-12 mb-12">
             <div>
               <div className="flex items-center gap-3 mb-6">
-                <img src="/logo.png" alt="Dependable Home Improvement" className="h-16 w-16 bg-white rounded-full" />
+                <img
+                  src="/logo.png"
+                  alt="Dependable Home Improvement"
+                  className="h-16 w-16 bg-white rounded-full"
+                />
                 <div>
                   <h3 className="text-xl font-bold">Dependable</h3>
                   <p className="text-secondary text-sm">Home Improvement</p>
                 </div>
               </div>
               <p className="text-white/70 leading-relaxed">
-                Since 2017, delivering trusted craftsmanship with 30+ years of construction experience serving residential and commercial clients with excellence.
+                Since 2017, delivering trusted craftsmanship with 30+ years of
+                construction experience serving residential and commercial
+                clients with excellence.
               </p>
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-6 text-secondary">Quick Links</h4>
+              <h4 className="text-lg font-bold mb-6 text-secondary">
+                Quick Links
+              </h4>
               <ul className="space-y-3">
-                <li><Link href="/services" className="text-white/70 hover:text-secondary transition-colors">Services</Link></li>
-                <li><Link href="/blog" className="text-white/70 hover:text-secondary transition-colors">Blog</Link></li>
-                <li><Link href="/faq" className="text-white/70 hover:text-secondary transition-colors">FAQ</Link></li>
-                <li><Link href="/videos" className="text-white/70 hover:text-secondary transition-colors">Video Library</Link></li>
-                <li><Link href="/resources" className="text-white/70 hover:text-secondary transition-colors">Free Resources</Link></li>
-                <li><Link href="/team" className="text-white/70 hover:text-secondary transition-colors">Our Team</Link></li>
-                <li><a href="#contact" className="text-white/70 hover:text-secondary transition-colors">Contact</a></li>
+                <li>
+                  <Link
+                    href="/services"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/blog"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/faq"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    FAQ
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/videos"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Video Library
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/resources"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Free Resources
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/team"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Our Team
+                  </Link>
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    className="text-white/70 hover:text-secondary transition-colors"
+                  >
+                    Contact
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-6 text-secondary">Services</h4>
+              <h4 className="text-lg font-bold mb-6 text-secondary">
+                Services
+              </h4>
               <ul className="space-y-3 text-white/70">
                 <li>Handyman Services</li>
                 <li>Carpentry & Woodwork</li>
@@ -884,16 +1148,20 @@ export default function Home() {
             </div>
 
             <div>
-              <h4 className="text-lg font-bold mb-6 text-secondary">Contact Info</h4>
+              <h4 className="text-lg font-bold mb-6 text-secondary">
+                Contact Info
+              </h4>
               <div className="space-y-4 text-white/70">
                 <p className="flex items-center gap-3">
                   <Phone className="h-5 w-5 text-secondary" />
-                  (201) 637-4343
+                  {businessPhone}
                 </p>
-                <p className="flex items-center gap-3">
-                  <Mail className="h-5 w-5 text-secondary" />
-                  prodendable@gmail.com
-                </p>
+                <a
+                  href={`mailto:${businessEmail}`}
+                  className="text-xl text-primary/80 hover:text-primary transition-colors break-all"
+                >
+                  {businessEmail}
+                </a>
                 <p className="text-sm">Mon-Sat: 8AM - 6PM</p>
               </div>
             </div>
@@ -901,16 +1169,31 @@ export default function Home() {
 
           <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
             <div className="text-white/60 text-center md:text-left">
-              <p>© {new Date().getFullYear()} Dependable Home Improvement. All rights reserved.</p>
+              <p>
+                © {new Date().getFullYear()} Dependable Home Improvement. All
+                rights reserved.
+              </p>
               <div className="flex items-center gap-4 mt-2 justify-center md:justify-start">
-                <Link href="/privacy" className="text-white/60 hover:text-secondary transition-colors text-sm">Privacy Policy</Link>
+                <Link
+                  href="/privacy"
+                  className="text-white/60 hover:text-secondary transition-colors text-sm"
+                >
+                  Privacy Policy
+                </Link>
                 <span className="text-white/40">•</span>
-                <Link href="/terms" className="text-white/60 hover:text-secondary transition-colors text-sm">Terms of Service</Link>
+                <Link
+                  href="/terms"
+                  className="text-white/60 hover:text-secondary transition-colors text-sm"
+                >
+                  Terms of Service
+                </Link>
               </div>
             </div>
             <div className="flex items-center gap-3">
               <Award className="h-5 w-5 text-secondary" />
-              <p className="text-white/80 text-sm">Super Service Award Winner 2024 • Angi Approved Pro</p>
+              <p className="text-white/80 text-sm">
+                {t("footer.award")}
+              </p>
             </div>
           </div>
         </div>

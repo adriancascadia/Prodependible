@@ -7,7 +7,7 @@ export interface LocalBusinessSchema {
   image: string[];
   "@id": string;
   url: string;
-  telephone: string;
+  phone: string;
   email: string;
   priceRange: string;
   foundingDate?: string;
@@ -52,8 +52,8 @@ export const getLocalBusinessSchema = (): LocalBusinessSchema => ({
   ],
   "@id": window.location.origin,
   url: window.location.origin,
-  telephone: "+12016374343",
-  email: "prodendable@gmail.com",
+  phone: "+1 (201)-6374343",
+  email: "prodependable@gmail.com",
   priceRange: "$$",
   foundingDate: "2017-08",
   address: {

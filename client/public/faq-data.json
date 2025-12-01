@@ -18,7 +18,7 @@
         {
           "id": 3,
           "question": "What areas do you serve?",
-          "answer": "We proudly serve all of Bergen County, NJ, including Hackensack, Teaneck, Fort Lee, Fair Lawn, Bergenfield, Paramus, Ridgewood, Englewood, and surrounding communities within a 25-mile radius. If you're unsure whether we serve your area, just give us a call!"
+          "answer": "We proudly serve all of Bergen County, NJ, including Fort Lee, Fair Lawn, Paramus, Ridgewood, Englewood, and surrounding communities within a 15-mile radius from Paramus, NJ. If you're unsure whether we serve your area, just give us a call!"
         },
         {
           "id": 4,
@@ -40,7 +40,7 @@
         {
           "id": 6,
           "question": "How long will my project take?",
-          "answer": "Project timelines vary based on scope and complexity. A bathroom renovation typically takes 3-4 weeks, kitchen remodels 4-8 weeks, and basement finishing 4-6 weeks. During your free consultation, we'll provide a detailed timeline specific to your project. We pride ourselves on completing projects on schedule."
+          "answer": "Project timelines vary based on scope and complexity. A bathroom renovation typically takes2-6 working days, kitchen remodels 3-8 working days, and basement finishing 3-10 working days. During your free consultation, we'll provide a detailed timeline specific to your project. We pride ourselves on completing projects on schedule."
         },
         {
           "id": 7,
@@ -77,20 +77,15 @@
         {
           "id": 12,
           "question": "What payment methods do you accept?",
-          "answer": "We accept checks, credit cards (Visa, MasterCard, American Express, Discover), and bank transfers. We never require cash-only payments. All payments are documented with receipts for your records."
+          "answer": "We accept checks, VenMo, PayPal, Zelle, and bank transfers. We never require cash-only payments. All payments are documented with receipts for your records."
         },
         {
           "id": 13,
           "question": "What is your payment schedule?",
-          "answer": "We typically require a small deposit (10-20%) to schedule your project and order materials. The remaining balance is divided into milestone payments based on project completion. Final payment is due upon project completion and your satisfaction. We comply with all New Jersey payment regulations."
+          "answer": "We typically require a small deposit and it depends on the kind of work, typically is from 20% to 50% of the total cost to secure your project on our schedule. The remaining balance is due upon project completion. For larger projects, we may set up a milestone payment schedule tied to specific phases of the work. We'll discuss and agree on the payment terms before starting."
         },
         {
           "id": 14,
-          "question": "Do you offer ?",
-          "answer": "Yes! We work with several financing partners to offer flexible payment plans for qualified homeowners. Options include 0% interest for 12 months, low-interest extended terms, and same-day approval. Ask about financing during your consultation."
-        },
-        {
-          "id": 15,
           "question": "Can I make changes to the project after we start?",
           "answer": "Yes, changes can be made, but they may affect the timeline and cost. We handle all changes through written change orders that detail the modification, cost impact, and timeline adjustment. This protects both you and us and ensures clear communication."
         }

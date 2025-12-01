@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Play, Clock, Eye, ChevronRight } from "lucide-react";
 import Breadcrumb from "@/components/Breadcrumb";
 import { Loader2 } from "lucide-react";
+import { getLocalBusinessSchema } from "@/lib/schema";
+
 
 interface Video {
   id: number;
@@ -33,6 +35,10 @@ export default function VideoLibrary() {
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState<string>("all");
   const [selectedVideo, setSelectedVideo] = useState<Video | null>(null);
+
+  const schema = getLocalBusinessSchema();
+  const businessEmail = schema.email || "prodependable@gmail.com";
+  const businessPhone = schema.phone || "+12016374343";
 
   useEffect(() => {
     fetch('/video-library.json')
@@ -279,7 +285,7 @@ export default function VideoLibrary() {
                 className="border-white text-white hover:bg-white hover:text-primary"
                 onClick={() => window.location.href = 'tel:2016374345'}
               >
-                Call (201) 637-4345
+                Call {businessPhone}
               </Button>
             </div>
           </div>

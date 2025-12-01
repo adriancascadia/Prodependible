@@ -8,10 +8,14 @@ import { Phone, Mail, MapPin, Clock, Send } from "lucide-react";
 import { toast } from "sonner";
 import Breadcrumb from "@/components/Breadcrumb";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { getLocalBusinessSchema } from "@/lib/schema";
 
 
 export default function Contact() {
   const { t } = useLanguage();
+  const schema = getLocalBusinessSchema();
+    const businessEmail = schema.email || "prodependable@gmail.com";
+    const businessPhone = schema.phone || "+12016374343";
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -121,7 +125,7 @@ export default function Contact() {
                           required
                           value={formData.phone}
                           onChange={handleChange}
-                          placeholder="(201) 555-0123"
+                          placeholder="(201) 555-2222"
                           className="border-2"
                         />
                       </div>
@@ -194,7 +198,7 @@ export default function Contact() {
                       <div>
                         <p className="font-semibold text-foreground">{t("contact.phoneLabel")}</p>
                         <a href="tel:+12016374345" className="text-primary hover:text-secondary transition-colors">
-                          (201) 637-4345
+                          {businessPhone}
                         </a>
                       </div>
                     </div>
@@ -203,7 +207,7 @@ export default function Contact() {
                       <div>
                         <p className="font-semibold text-foreground">{t("contact.emailLabel")}</p>
                         <a href="mailto:info@prodependable.com" className="text-primary hover:text-secondary transition-colors">
-                          info@prodependable.com
+                          {businessEmail}
                         </a>
                       </div>
                     </div>
