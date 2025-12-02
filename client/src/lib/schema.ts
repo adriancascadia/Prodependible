@@ -52,7 +52,7 @@ export const getLocalBusinessSchema = (): LocalBusinessSchema => ({
   ],
   "@id": window.location.origin,
   url: window.location.origin,
-  phone: "+1 (201)-6374343",
+  phone: "+1 (201)-637-4343",
   email: "prodependable@gmail.com",
   priceRange: "$$",
   foundingDate: "2017-08",

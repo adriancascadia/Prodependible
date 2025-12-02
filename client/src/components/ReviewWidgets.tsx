@@ -70,7 +70,7 @@ export default function ReviewWidgets() {
           </a>
         </div>
         <p className="text-muted-foreground mb-4">
-          Proud recipient of the Angi Super Service Award 2024 & 2025, recognizing exceptional service and customer satisfaction throughout the year.
+          Proud recipient of the Angi Super Service 2024 and 2025: Licensed, Insured & Award-Winning, recognizing exceptional service and customer satisfaction throughout the year.
         </p>
         <p className="text-sm text-primary/70 italic">
           Click the certificate above to view the full award

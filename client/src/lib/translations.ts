@@ -25,7 +25,7 @@ export const translations = {
     hero: {
       award: "Angi Super Service Award Winner 2024 & 2025",
       tagline: "Crafting Excellence, Building Trust",
-      subtitle: "Transform your property with 20+ years of masterful craftsmanship. From stunning decks to flawless door installations, we deliver premium quality that stands the test of time.",
+      subtitle: "Transform your property with 30+ years of masterful craftsmanship. From stunning decks to flawless door installations, we deliver premium quality that stands the test of time.",
       cta: "Get Free Estimate",
       call: "Call Now"
     },
@@ -63,7 +63,7 @@ export const translations = {
       subtitle: "Comprehensive home improvement solutions delivered with expertise, integrity, and exceptional craftsmanship since 2017, backed by 30+ years of construction experience.",
       whatWeOffer: "What We Offer:",
       whyChooseUs: "Why Choose Us:",
-      rating: "4.9 Rating on Angi",
+      rating: "5.0 Rating on Angi",
       trustedBy: "Trusted by hundreds of homeowners",
       getEstimate: "Get Free Estimate",
       requestEstimateOnline: "Request Estimate Online",
@@ -351,7 +351,7 @@ export const translations = {
     hero: {
       award: "Победитель премии Angi Super Service 2024 & 2025",
       tagline: "Создаём качество, строим доверие",
-      subtitle: "Преобразите вашу собственность с 20+ летним опытом мастерства. От потрясающих террас до безупречной установки дверей - мы обеспечиваем премиальное качество, которое выдерживает испытание временем.",
+      subtitle: "Преобразите вашу собственность с 30+ летним опытом мастерства. От потрясающих террас до безупречной установки дверей - мы обеспечиваем премиальное качество, которое выдерживает испытание временем.",
       cta: "Бесплатная оценка",
       call: "Позвонить"
     },
@@ -677,7 +677,7 @@ export const translations = {
     hero: {
       award: "Angi Super Service Ganadores 2024 & 2025",
       tagline: "Creando Excelencia, Construyendo Confianza",
-      subtitle: "Transforme su propiedad con más de 20 años de artesanía magistral. Desde terrazas impresionantes hasta instalaciones de puertas impecables, entregamos calidad premium que resiste el paso del tiempo.",
+      subtitle: "Transforme su propiedad con más de 30 años de artesanía magistral. Desde terrazas impresionantes hasta instalaciones de puertas impecables, entregamos calidad premium que resiste el paso del tiempo.",
       cta: "Cotización Gratuita",
       call: "Llamar Ahora"
     },

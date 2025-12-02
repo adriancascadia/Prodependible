@@ -531,7 +531,7 @@ export default function Home() {
                 <div className="flex items-center gap-3">
                   <Star className="h-8 w-8 text-secondary fill-secondary" />
                   <div>
-                    <p className="text-2xl font-bold text-white">4.9/5.0</p>
+                    <p className="text-2xl font-bold text-white">5.0</p>
                     <p className="text-sm text-white/80">Angi Reviews</p>
                   </div>
                 </div>
@@ -909,7 +909,12 @@ export default function Home() {
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 See what our customers are saying on trusted review platforms
               </p>
+              <Badge className="mt-16 bg-secondary/90 backdrop-blur-sm text-primary px-6 py-3 text-base font-bold shadow-2xl animate-fade-in">
+            <Award className="h-5 w-5 mr-2 inline" />
+            {t("hero.award")}
+          </Badge>
             </div>
+            
             <ReviewWidgets />
           </div>
         </div>
