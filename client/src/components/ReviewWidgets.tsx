@@ -57,17 +57,7 @@ export default function ReviewWidgets() {
               {/* <span className="text-muted-foreground">(127 reviews)</span> */}
             </div>
           </div>
-          <a 
-            href="/SSA_Certificate_2025.pdf" 
-            target="_blank"
-            className="hover:scale-105 transition-transform"
-          >
-            <img 
-              src="/SSA_Certificate_2025.jpg" 
-              alt="Angi Super Service Award 2025"
-              className="w-32 h-auto rounded-lg shadow-lg"
-            />
-          </a>
+          
         </div>
         <p className="text-muted-foreground mb-4">
           Proud recipient of the Angi Super Service 2024 and 2025: Licensed, Insured & Award-Winning, recognizing exceptional service and customer satisfaction throughout the year.

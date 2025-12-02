@@ -902,17 +902,28 @@ export default function Home() {
 
           {/* Review Widgets */}
           <div className="mt-24">
-            <div className="text-center mb-16">
+            <div className="flex flex-col items-center text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold text-primary mb-6">
                 Verified Reviews & Ratings
               </h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
                 See what our customers are saying on trusted review platforms
               </p>
-              <Badge className="mt-16 bg-secondary/90 backdrop-blur-sm text-primary px-6 py-3 text-base font-bold shadow-2xl animate-fade-in">
+              <Badge className="mb-10 mt-10 bg-secondary/90 backdrop-blur-sm text-primary px-6 py-3 text-base font-bold shadow-2xl animate-fade-in">
             <Award className="h-5 w-5 mr-2 inline" />
             {t("hero.award")}
           </Badge>
+          <a 
+            href="/SSA_Certificate_2025.pdf" 
+            target="_blank"
+            className="hover:scale-105 transition-transform"
+          >
+            <img 
+              src="/SSA_Certificate_2025.jpg" 
+              alt="Angi Super Service Award 2025"
+              className="w-96 h-auto rounded-lg shadow-lg"
+            />
+          </a>
             </div>
             
             <ReviewWidgets />
