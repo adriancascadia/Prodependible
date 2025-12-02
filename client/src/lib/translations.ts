@@ -18,7 +18,8 @@ export const translations = {
       videos: "Videos",
       faq: "FAQ",
       team: "Our Team",
-      contact: "Contact"
+      contact: "Contact",
+      freeEstimate: "Free Estimate"
     },
     // Hero Section
     hero: {
@@ -343,7 +344,8 @@ export const translations = {
       videos: "Видео",
       faq: "Вопросы",
       team: "Наша команда",
-      contact: "Контакты"
+      contact: "Контакты",
+      freeEstimate: "Бесплатная оценка"
     },
     // Hero Section
     hero: {
@@ -668,7 +670,8 @@ export const translations = {
       videos: "Videos",
       faq: "Preguntas",
       team: "Equipo",
-      contact: "Contacto"
+      contact: "Contacto",
+      freeEstimate: "Cotización Gratuita"
     },
     // Hero Section
     hero: {

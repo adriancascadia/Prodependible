@@ -6,6 +6,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 import LanguageToggle from "./LanguageToggle";
 
 export default function Navigation() {
+  const { t } = useLanguage();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [location] = useLocation();
@@ -41,35 +42,35 @@ export default function Navigation() {
                 <img src="/logo.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
                 <div className="max-w-[180px]">
                   <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                    Dependable Home<br />Improvement
+                    {t('header.title')}<br />Improvement
                   </h1>
                   <p className={`text-xs font-medium transition-colors ${scrolled || !isHomePage ? "text-secondary" : "text-secondary"}`}>
-                    Premium Quality Since 2017
+                    {t('header.subtitle')}
                   </p>
                 </div>
               </div>
             </Link>
             <div className="hidden lg:flex items-center gap-8 xl:gap-10">
               <Link href="/services" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Services
+                {t('nav.services')}
               </Link>
               <Link href="/gallery" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Gallery
+                {t('nav.gallery')}
               </Link>
               <Link href="/blog" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Blog
+                {t('nav.blog')}
               </Link>
               <Link href="/videos" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Videos
+                {t('nav.videos')}
               </Link>
               <Link href="/faq" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                FAQ
+                {t('nav.faq')}
               </Link>
               <Link href="/team" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Our Team
+                {t('nav.team')}
               </Link>
               <Link href="/contact" className={`font-medium transition-colors hover:text-secondary ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                Contact
+                {t('nav.contact')}
               </Link>
               <Link href="/search">
                 <Button 
@@ -85,7 +86,7 @@ export default function Navigation() {
                 className="bg-secondary hover:bg-secondary/90 text-primary font-bold shadow-lg hover:shadow-xl transition-all"
                 onClick={scrollToContact}
               >
-                Free Estimate
+                {t('nav.freeEstimate')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
@@ -120,37 +121,37 @@ export default function Navigation() {
           <div className="container py-6 space-y-4">
             <Link href="/services" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Services
+                {t('nav.services')}
               </div>
             </Link>
             <Link href="/gallery" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Gallery
+                {t('nav.gallery')}
               </div>
             </Link>
             <Link href="/blog" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Blog
+                {t('nav.blog')}
               </div>
             </Link>
             <Link href="/videos" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Videos
+                {t('nav.videos')}
               </div>
             </Link>
             <Link href="/faq" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                FAQ
+                {t('nav.faq')}
               </div>
             </Link>
             <Link href="/team" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Our Team
+                {t('nav.team')}
               </div>
             </Link>
             <Link href="/contact" onClick={() => setMobileMenuOpen(false)}>
               <div className="py-3 px-4 hover:bg-cream rounded-lg transition-colors font-medium text-primary">
-                Contact
+                {t('nav.contact')}
               </div>
             </Link>
             <div className="pt-4 border-t border-border">
@@ -161,7 +162,7 @@ export default function Navigation() {
                   scrollToContact();
                 }}
               >
-                Get Free Estimate
+                {t('hero.cta')}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </div>
