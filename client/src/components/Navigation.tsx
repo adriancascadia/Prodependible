@@ -42,7 +42,7 @@ export default function Navigation() {
                 <img src="/logo.png" alt="Dependable Home Improvement" className="h-24 w-24 flex-shrink-0" />
                 <div className="max-w-[180px]">
                   <h1 className={`text-lg font-bold leading-tight transition-colors ${scrolled || !isHomePage ? "text-primary" : "text-white"}`}>
-                    {t('header.title')}<br />Improvement
+                    {t('header.title')}
                   </h1>
                   <p className={`text-xs font-medium transition-colors ${scrolled || !isHomePage ? "text-secondary" : "text-secondary"}`}>
                     {t('header.subtitle')}

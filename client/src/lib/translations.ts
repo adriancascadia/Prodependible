@@ -23,7 +23,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Super Service Award Winner 2025",
+      award: "Angi Super Service Award Winner 2024 & 2025",
       tagline: "Crafting Excellence, Building Trust",
       subtitle: "Transform your property with 20+ years of masterful craftsmanship. From stunning decks to flawless door installations, we deliver premium quality that stands the test of time.",
       cta: "Get Free Estimate",
@@ -349,7 +349,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Победитель премии Super Service 2025",
+      award: "Победитель премии Angi Super Service 2024 & 2025",
       tagline: "Создаём качество, строим доверие",
       subtitle: "Преобразите вашу собственность с 20+ летним опытом мастерства. От потрясающих террас до безупречной установки дверей - мы обеспечиваем премиальное качество, которое выдерживает испытание временем.",
       cta: "Бесплатная оценка",
@@ -675,7 +675,7 @@ export const translations = {
     },
     // Hero Section
     hero: {
-      award: "Super Service Award Winner 2025",
+      award: "Angi Super Service Ganadores 2024 & 2025",
       tagline: "Creando Excelencia, Construyendo Confianza",
       subtitle: "Transforme su propiedad con más de 20 años de artesanía magistral. Desde terrazas impresionantes hasta instalaciones de puertas impecables, entregamos calidad premium que resiste el paso del tiempo.",
       cta: "Cotización Gratuita",
