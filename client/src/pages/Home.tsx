@@ -745,8 +745,10 @@ export default function Home() {
         <div className="container mx-auto px-12">
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary text-primary px-6 py-2 text-base font-bold">
+              <Link href="/gallery">              
               <ImageIcon className="h-5 w-5 mr-2 inline" />
               {t("gallery.button")}
+              </Link>
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
               {t("gallery.title")}
