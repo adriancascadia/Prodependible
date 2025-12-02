@@ -500,6 +500,80 @@ export const translations = {
         subtitle: "Получите бесплатную оценку без обязательств и почувствуйте разницу Dependable"
       }
     },
+    // Gallery
+    gallery: {
+      title: "Галерея проектов",
+      subtitle: "Просмотр наших завершенных проектов и увидите результаты самостоятельно",
+      button: "Просмотр всех проектов",
+      deck: {
+        title: "Строительство и реставрация террас",
+        desc: "Индивидуальные террасы для красоты и долговечности",
+        category: "Улучшение террас"
+      },
+      completeDeck: {
+        title: "Полная реставрация террас",
+        desc: "Полная реставрация террас",
+        category: "Строительство террас"
+      },
+      doors: {
+        title: "Установка дверей",
+        desc: "Профессиональная установка всех типов дверей",
+        category: "Установка дверей"
+      },
+      stairs: {
+        title: "Установка лестниц",
+        desc: "Профессиональная установка всех типов лестниц",
+        category: "Установка лестниц"
+      },
+      patioDoor: {
+        title: "Установка дверей на террасе",
+        desc: "Профессиональная установка всех типов дверей на террасе",
+        category: "Установка дверей на террасе"
+      },
+      cellarDoor: {
+        title: "Установка дверей в подвале",
+        desc: "Профессиональная установка всех типов дверей в подвале",
+        category: "Установка дверей в подвале"
+      },
+      basement: {
+        title: "Отделка подвалов",
+        desc: "Превратите неиспользуемое пространство в жилую зону",
+        category: "Отделка подвалов"
+      },
+      carpentry: {
+        title: "Карпентерская работа",
+        desc: "Профессиональная установка всех типов дверей в подвале",
+        category: "Карпентерская работа"
+      },
+      zoomIn: "Нажмите на изображение, чтобы увеличить",
+      zoomOut: "Нажмите на изображение, чтобы уменьшить",
+      cta: {
+        title: "Готовы начать проект?",
+        subtitle: "Получите бесплатную оценку и ощутите разницу Dependable."
+      }
+    },
+    // Team
+    team: {
+      loading: "Загрузка команды...",
+      badge: "Наша команда",
+      title: "Познакомьтесь с нашими экспертами",
+      subtitle: "Наша команда опытных профессионалов и квалифицированных специалистов предоставляет совокупный опыт в каждом проекте. Мы не только подрядчики—we're craftsmen who take pride in transforming your vision into reality.",
+      whyChoose: {
+        title: "¿Почему выбрать нашу команду?",
+        experienced: {
+          title: "Профессионально опыт",
+          desc: "Каждый член команды предлагает годы практического опыта и проверенный опыт."
+        },
+        licensed: {
+          title: "Лицензия и страхование в Нью-Джерси",
+          desc: "Лицензия и страхование в Нью-Джерси"
+        },
+        quality: {
+          title: "Качество",
+          desc: "Мы тратим время на то, чтобы сделать это хорошо, и мы уверены в поддержке нашего работы с надежными гарантиями."
+        }
+      }
+    },
     // Contact
     contact: {
       badge: "Свяжитесь с нами",
@@ -737,6 +811,80 @@ export const translations = {
       cta: {
         title: "¿Listo para comenzar su proyecto?",
         subtitle: "Obtenga una cotización gratuita sin compromiso y experimente la diferencia Dependable"
+      }
+    },
+    // Gallery
+    gallery: {
+      title: "Galería de proyectos",
+      subtitle: "Explore nuestros proyectos completados y vea los resultados por usted mismo",
+      button: "Ver todos los proyectos",
+      deck: {
+        title: "Construcción y Refinado de Terrazas",
+        desc: "Terrazas personalizadas diseñadas para belleza y durabilidad",
+        category: "Mejora de terrazas"
+      },
+      completeDeck: {
+        title: "Reconstrucción completa de terrazas",
+        desc: "Terrazas personalizadas diseñadas para belleza y durabilidad",
+        category: "Construcción de terrazas"
+      },
+      doors: {
+        title: "Instalación de puertas",
+        desc: "Instalación profesional de todo tipo de puertas",
+        category: "Instalación de puertas"
+      },
+      stairs: {
+        title: "Instalación de escaleras",
+        desc: "Instalación profesional de todo tipo de escaleras",
+        category: "Instalación de escaleras"
+      },
+      patioDoor: {
+        title: "Instalación de puertas de patio",
+        desc: "Instalación profesional de todo tipo de puertas de patio",
+        category: "Reemplazo de puertas"
+      },
+      cellarDoor: {
+        title: "Instalación de puertas de sótano",
+        desc: "Instalación profesional de todo tipo de puertas de sótano",
+        category: "Exterior Access"
+      },
+      basement: {
+        title: "Acabado de sótanos",
+        desc: "Transformar espacios sin usar en áreas habitables funcionales",
+        category: "Acabado de sótanos"
+      },
+      carpentry: {
+        title: "Carpintería personalizada",
+        desc: "Carpintería personalizada diseñada para tu visión",
+        category: "Carpintería personalizada"
+      },
+      zoomIn: "Click image to zoom in",
+      zoomOut: "Click image to zoom out",
+      cta: {
+        title: "¿Listo para comenzar su proyecto?",
+        subtitle: "Obtenga una cotización gratuita y experimente la diferencia Dependable."
+      }
+    },
+    // Team
+    team: {
+      loading: "Loading team...",
+      badge: "Nuestro equipo",
+      title: "Conoce a nuestros expertos",
+      subtitle: "Nuestro equipo de profesionales experimentados y calificados brinda décadas de experiencia combinada a cada proyecto. No somos solo contratistas—we're craftsmen who take pride in transforming your vision into reality.",
+      whyChoose: {
+        title: "¿Por qué elegir nuestro equipo?",
+        experienced: {
+          title: "Profesionales experimentados",
+          desc: "Cada miembro del equipo brinda años de experiencia práctica y experiencia probada."
+        },
+        licensed: {
+          title: "NJ Licensed & Insured",
+          desc: "Licenciado y asegurado en NJ"
+        },
+        quality: {
+          title: "Calidad enfocada",
+          desc: "Nos tomamos el tiempo de hacerlo bien y nos comprometemos a respaldar nuestro trabajo con garantías sólidas."
+        }
       }
     },
     // Contact
