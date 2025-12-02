@@ -45,7 +45,7 @@ export const translations = {
       experience: "Years Experience",
       projects: "Projects Completed",
       satisfaction: "Satisfaction Rate",
-      warranty: "Year Warranty"
+      reviews: "Reviews"
     },
     // Platform
     platform: {
@@ -371,7 +371,7 @@ export const translations = {
       experience: "Лет опыта",
       projects: "Проектов завершено",
       satisfaction: "Удовлетворённость",
-      warranty: "Лет гарантии"
+      reviews: "Отзывы"
     },
     // Platform
     platform: {
@@ -694,7 +694,7 @@ export const translations = {
       experience: "Años de Experiencia",
       projects: "Proyectos Completados",
       satisfaction: "Satisfacción",
-      warranty: "Años de Garantía"
+      reviews: "Calificaciones"
     },
     // Services
     services: {

@@ -102,7 +102,7 @@ export default function Home() {
           years: Math.floor(30 * progress),
           projects: Math.floor(500 * progress),
           clients: Math.floor(300 * progress),
-          rating: (4.9 * progress).toFixed(1) as any,
+          rating: (5.0 * progress).toFixed(1) as any,
         });
 
         if (step >= steps) {
@@ -111,7 +111,7 @@ export default function Home() {
             years: 30,
             projects: 500,
             clients: 300,
-            rating: 4.9 as any,
+            rating: 5.0 as any,
           });
         }
       }, interval);
@@ -431,7 +431,7 @@ export default function Home() {
                 <p className="text-3xl font-bold text-secondary mb-1">
                   {t("credentials.award_winning")}
                 </p>
-                <p className="text-lg text-muted-foreground">2025</p>
+                <p className="text-lg text-muted-foreground">2024 & 2025</p>
               </div>
             </div>
 
@@ -517,7 +517,7 @@ export default function Home() {
               <div className="text-6xl md:text-7xl font-bold text-secondary mb-3">
                 {counts.rating}
               </div>
-              <p className="text-xl text-white/90">{t("stats.warranty")}</p>
+              <p className="text-xl text-white/90">{t("stats.reviews")}</p>
             </div>
           </div>
 
@@ -873,7 +873,7 @@ export default function Home() {
           <div className="text-center mb-20">
             <Badge className="mb-6 bg-secondary/10 text-secondary border-secondary px-6 py-2 text-base">
               <Star className="h-4 w-4 mr-2 inline fill-secondary" />
-              Trusted on Angi
+              Trusted on Angi/Google
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold text-primary mb-6">
               Client Success Stories
@@ -920,7 +920,7 @@ export default function Home() {
           >
             <img 
               src="/SSA_Certificate_2025.jpg" 
-              alt="Angi Super Service Award 2025"
+              alt="Angi Super Service Award 2024 & 2025"
               className="w-96 h-auto rounded-lg shadow-lg"
             />
           </a>
