@@ -370,7 +370,7 @@ export default function Home() {
               onClick={() => (window.location.href = "tel:2016374345")}
             >
               <Phone className="mr-3 h-6 w-6" />
-              (201) 637-4343
+              {businessPhone}
             </Button>
           </div>
 
@@ -542,15 +542,6 @@ export default function Home() {
                   <div>
                     <p className="text-2xl font-bold text-white">5.0</p>
                     <p className="text-sm text-white/80">Google Reviews</p>
-                  </div>
-                </div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl px-8 py-6 border border-white/20 hover:bg-white/20 transition-all">
-                <div className="flex items-center gap-3">
-                  <Award className="h-8 w-8 text-secondary" />
-                  <div>
-                    <p className="text-2xl font-bold text-white">A+</p>
-                    <p className="text-sm text-white/80">BBB Rating</p>
                   </div>
                 </div>
               </div>
